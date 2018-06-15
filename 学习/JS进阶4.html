@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS进阶4</title>
+		
+	<script>
+		//1 getElementsByName()【抓取name 有多少个！】
+		function xxgg1(){
+			var xxg1=document.getElementsByName("xx");
+			alert("有 "+xxg1.length+" 项");
+		}
+		
+		//2 getElementsByTagName()【抓取 <标签> 有多少个】
+		function xxgg2(){
+			var xxg2=document.getElementsByTagName("input");
+			alert("相关<标签> 有: "+xxg2.length+" 个【input】");
+		}
+		
+		//3 getAttribute() 得到这条标签的属性
+		function xxgg3(){
+			var xxg3=document.getElementsByTagName("input");
+			var num;
+			for (var i=0; i< xxg3.length;i++){
+				num = num + (xxg3[i].getAttribute("name")+"<br>");
+			}
+			document.getElementById("xx1").innerHTML=num;
+		}
+				
+		//4 setAttribute() 设置这条标签的属性
+		 var xxg4=document.getAttribute("p");
+		 if(xxg4.id=="xx1"){
+			document.setAttribute("name","lalala");
+		}
+		
+
+	</script>
+</head>
+<body>
+	<h1 name="xx">认识DOM 文档对象模型！(document object model)</h1>
+	<!-- 1 getElementsByName() --><!-- 2 getElementsByTagName() -->
+	<input name="xx" type="text" value="1">
+	<input name="xx" type="text" value="2">
+	<input name="xx" type="text" value="3"><br>
+	<input type="button" onclick="xxgg1()" value="getElementsByName看看有几项"><br><br>
+	<input type="button" onclick="xxgg2()" value="getElementsByTagName看看有几个【input】"><br><br>
+	<input type="button" onclick="xxgg3()" value="getAttribute">
+	<p id="xx1">getAttribute<p>
+	
+	<!-- 5 节点属性：1.nodeName节点的名称 2.nodeValue节点的值 3.nodeType节点的类型 -->	
+	<ul>
+     <li>javascript</li>
+     <li>HTML/CSS</li>
+     <li>jQuery</li>     
+	</ul>
+	<!-- 7 访问子节点的第一和最后项(firstChild)(lastChild) -->
+	<div id="con">
+	  <p>javascript</p>
+	  <div>jQuery</div>
+	  <h5>PHP</h5>
+	  <p>要被删除的</p>
+	</div><br>
+	
+	<input type="button" onclick="xxgg12()" value="清除内容！"><br><br>
+	
+	<div><b id="omg">JavaScript</b>是一个很常用的技术</div>
+	<a href="javascript:xxgg13()">加粗变斜体</a><br><br>
+	<script>
+	//5 节点属性：1.nodeName节点的名称 2.nodeValue节点的值 3.nodeType节点的类型
+		var xxg5=document.getElementsByTagName("li");
+		for(var i=0;i<xxg5.length;i++){
+			document.write("节点名:"+xxg5[i].nodeName+"<br>");
+			document.write("节点值:"+xxg5[i].nodeValue+"<br>");
+			document.write("节点类型:"+xxg5[i].nodeType+"<br>");
+		}
+		
+	//6 访问 子节点childNodes
+		var xxg6=document.getElementsByTagName("ul");
+		x=xxg6[0].childNodes;
+		document.write("<br>UL子节点个数:"+x.length+"<br>");
+		document.write("节点类型:"+x[0].nodeType+"<br>"+"<br>")
+	
+	//7 访问该节点的第一项子节点和最后项子节点(firstChild)(lastChild)
+		var xxg7=document.getElementById("con");
+		document.write("访问第一项子节点: "+xxg7.firstChild.nodeName+"<br>");
+		document.write("访问最后项子节点: "+xxg7.lastChild.nodeName+"<br>"+"<br>");
+		
+	//8 访问父节点parentNode
+		var xxg8=document.getElementById("con");
+		document.write("访问父节点: "+ xxg8.parentNode.nodeName+"<br>");
+	//8.1 访问祖节点parentNode.parentNode
+		document.write("访问祖节点: "+ xxg8.parentNode.parentNode.nodeName+"<br>");
+	
+	//9 访问兄弟节点 (nextSibling 访问下一个兄弟节点)(previousSibling 访问上一个兄弟节点)
+		var xxg9=document.getElementsByTagName("li")[0];
+		document.write(xxg9.nodeName+"="+xxg9.innerHTML+"<br>");
+		var xxg99=xxg9.nextSibling.nextSibling;
+		document.write(xxg99.nodeName+"="+xxg99.innerHTML);
+		
+	//10 插入节点appendChild();
+	var xxg10=document.getElementById("con");//提取id
+	var xxg100=document.createElement("li");//三部曲 ：创建 
+	xxg100.innerHTML="appendChild插入内容 : 谢夏戈很帅！";        //三部曲 ：赋值
+	xxg10.appendChild(xxg100);				//三部曲 ：插入
+	
+	//11 插入节点insertBefore();
+	var xxg11=document.getElementById("con");//
+	var xxg111=document.createElement("li");
+	xxg111.innerHTML="insertBefore插入节点内容到指定位置";
+	xxg11.insertBefore(xxg111,xxg11.childNodes[0]);
+	
+	//12删除节点removeChild()
+	function xxgg12(){
+		var xxg12=document.getElementById("con");
+		//建议从后往前删！
+		for(var i=xxg12.childNodes.length-1;i>=0;i--)
+		{	
+			
+			xxg12.removeChild(xxg12.childNodes[i]);			
+		}
+	}
+	
+	//13 替换元素节点replaceChild()
+	function xxgg13(){
+		var xxg13=document.getElementById("omg");
+		var xxg133=document.createElement("i");
+		xxg13.parentNode.replaceChild(xxg133,xxg13);//xxg13的父级元素 替换:(替换元素,被替换元素)
+		xxg133.innerHTML=xxg13.innerHTML;
+	}
+	
+		
+		
+		
+		
+	//14 创建元素节点createElement()
+		var xxg14 = document.body;
+		//创建链接
+		function xxgg14(url,text)
+		{
+			var a = document.createElement("a");
+			a.href=url;
+			a.innerHTML=text;
+			a.style.color="red";
+			xxg14.appendChild(a);		
+		}
+		// 调用函数创建链接
+		xxgg14("http://www.imooc.com/","慕课网");
+		
+		
+		
+		
+		
+	//15 创建文本节点createTextNode()
+		var xxg15 = document.createElement("p");//创建节点元素
+		xxg15.className="xxgg";// 元素类名
+		var xxg155=document.createTextNode("I love JavaScript!"); //创建一个文本节点
+		xxg15.appendChild(xxg155);// 把刚刚创建的文本节点给到之前创建的节点元素
+		document.body.appendChild(xxg15); //然后把整体放到body里去
+
+
+		
+		
+		
+		
+	//16 浏览器窗口可视区域大小(clientWidth) (cilentHeight)
+		var w=document.documentElement.clientWidth||document.body.clientWidth;
+		var h=document.documentElement.clientHeight||document.body.clientHeight;
+		document.write("client根据综合:"+w+"*"+h+"<br>")
+
+		//HTML文档所在窗口的当前宽度 高度
+		var w=document.documentElement.clientHeight;
+		var h=document.documentElement.clientWidth;
+		document.write("client根据(HTML):"+w+"*"+h+"<br>")
+
+		//浏览器窗口的内部宽度 高度
+		var w=window.innerWidth;
+		var h=window.innerHeight;
+		document.write("inner根据内部:"+w+"*"+h+"<br>")
+
+		//Document对象的body属性对应HTML文档的<body>标签
+		var w=document.body.clientWidth;
+		var h=document.body.clientHeight;
+		document.write("client根据(body):"+w+"*"+h+"<br>"+"<br>");
+	
+	//17 网页尺寸scrollHeight() scrollWidth()
+	var w1=document.documentElement.scrollWidth;
+	var h1=document.documentElement.scrollHeight;
+	document.write("scrollWidth网页尺寸宽1:"+w1+"<br>"+"scrollHeight网页尺寸高1:"+h1+"<br>");
+	var w2=document.body.scrollWidth;
+	var h2=document.body.scrollHeight;
+	document.write("scrollWidth网页尺寸宽2(body):"+w2+"<br>"+"scrollHeight网页尺寸高2(body):"+h2+"<br>"+"<br>");
+	
+	//18 网页尺寸offsetHeight() offsetWidth()
+	var w1=document.documentElement.offsetWidth;
+	var h1=document.documentElement.offsetHeight;
+	document.write("offsetWidth网页尺寸宽1:"+w1+"<br>"+"offsetHeight网页尺寸高1:"+h1+"<br>");
+	var w2=document.body.offsetWidth;
+	var h2=document.body.offsetHeight;
+	document.write("offsetWidth网页尺寸宽2(body):"+w2+"<br>"+"offsetHeight网页尺寸高2(body):"+h2+"<br>"+"<br>");
+	
+	
+	//19 网页卷去的距离与偏移量
+	/*
+	scrollLeft:设置或获取位于给定对象左边界与窗口中目前可见内容的最左端之间的距离 ，即左边灰色的内容。
+
+	scrollTop:设置或获取位于对象最顶端与窗口中可见内容的最顶端之间的距离 ，即上边灰色的内容。
+
+	offsetLeft:获取指定对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置 。
+
+	offsetTop:获取指定对象相对于版面或由 offsetParent 属性指定的父坐标的计算顶端位置 。
+	*/
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+	
+		
+		
+	</script>
+	<!--  -->
+</body>
+<html>

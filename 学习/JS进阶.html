@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS进阶</title>	
+<script>	
+	function xxg1(){//1鼠标点击事件（onclick）
+		alert("onclick是鼠标点击事件");
+	}
+		
+	function xxg2(){//2鼠标经过事件（onmouseover）
+		alert("onmouseover是鼠标经过事件");
+	}
+	
+	function xxg3(){//3鼠标移开事件（onmouseout）
+		alert("onmouseout是鼠标移开事件");
+	}
+		
+	function xxg4(){//4光标聚集事件（onfocus）
+		alert("onfocus是光标聚集事件");
+	}
+		
+	function xxg5(){//5光标失集事件（onblur）
+	
+		alert("onblur是 失集事件");
+	}
+	
+	function xxg6(){//6内容选中事件（onselect）
+		alert("onselect是内容选中事件");
+	}
+	
+	function xxg7(){//7文本框内容改变事件（onchange）
+		alert("onchange是 内容改变事件");
+	}
+	
+	function xxg8(){//8加载事件（onload）
+		alert("onload是 加载事件");
+	}
+	
+	//window.onunload = xxg9();
+	function xxg9(){//9卸载事件（onunload）
+		alert("onunload是 卸载事件 你确定要离开该网页吗？");
+	}
+	
+	function xxg10(){//10编程练习：计算器！
+		var x1=parseInt(document.getElementById("txt1").value);//得到第一个框值
+		var x2=parseInt(document.getElementById("txt2").value);//得到第二个框值
+		var x3=""; //定义结果
+		var xx=document.getElementById("select").value;//
+		switch(xx)
+		{
+			case "+": x3=x1+x2;break;
+			case "-": x3=x1-x2;break;
+			case "*": x3=x1*x2;break;
+			case "/": if(x2===0)
+						{
+						x3="被除数不能为0";break;
+						}
+						else
+						{
+						x3=x1/x2;break;
+						}
+		}
+		document.getElementById("txt3").value=x3;
+	}
+</script>
+</head>
+<body onload="xxg8()">	
+	<form></br><!-- 1鼠标点击事件（onclick） -->
+		<input  type="button" value="鼠标点击事件(onclick)" onclick="xxg1()">
+	</form>
+	
+	<form></br><!-- 2鼠标经过事件（onmouseover） -->
+		<input type="button" value="经过我！（onmouseover）" onmouseover="xxg2()">
+	</form>
+	
+	<form></br><!-- 3鼠标移开事件（onmouseout） -->
+		<input type="button" value="先经过 后移开！（onmouseout）" onmouseout="xxg3()">
+	</form>
+	
+	<form></br><!-- 4光标聚集事件（onfocus） -->
+		<input type="text" value="光标聚集（onfocus）" onmouseover="xxg4()">
+	</form>
+	
+	<form></br><!-- 5光标失集事件（onblur） -->
+		用户<input type="text" value="失集（onblur）" onblur="xxg5()">
+		密码<input type="text" value="密码（onblur）">
+	</form>
+
+	<form></br><!-- 6内容选中事件（onselect） -->
+		内容选中(onselect):<br>
+		<textarea cols="60" rows="5" onselect="xxg6()">请写入个人简介，不少于200字！</textarea>
+	</form>
+	
+	<form></br><!-- 7文本框内容改变事件（onchange） -->
+		内容改变(onchange):<br>
+		<textarea cols="60" rows="5" onchange="xxg7()">请写入个人简介，不少于200字！</textarea>
+	</form>
+	
+	<form></br><!-- 10编程练习：计算器！ -->
+	<input type="text" id="txt1">	
+	<select id="select">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+	<input type="text" id="txt2">
+	<input type="button" value=" = " onclick="xxg10()">
+	<input type="text" id="txt3">
+	</form>
+	
+	<!-- -->
+</body>
+</html>

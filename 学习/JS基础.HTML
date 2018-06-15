@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>JS基础</title>
+	
+		<script>
+		//document.write 是输出内容的意思
+		document.write("你不好 世界。");
+		
+		//alert是弹窗框哦！
+		alert("alert是弹窗框！")
+			
+		//confirm是确认取消消息对话框！(用来判断用户点击 确认 还是 取消)
+		function xxg1()
+		{
+			var xxg=confirm("这个功能叫做confirm功能！");
+			if(xxg==true)
+			{
+				document.write("确定！");
+			}
+			else
+			{
+				document.write("取消！");
+			}	
+		}
+		
+		//prompt 也是输入文本消息对话框 (用来判断用户输入的文本 的)
+		function xxg2()
+		{
+			var xxg=prompt("请输入一些乱七八糟的东西！(你输入什么东西就会显示什么东西！)");
+			if(xxg){
+			document.write(xxg);}
+			else{return;}
+		}
+		
+		//window.open 打开新窗口。
+		//menubar菜单 toolbar工具条 scrollbars滚动条 status状态栏
+		function xxg3()
+		{
+			window.open('http://www.imooc.com','_blank',)
+		}
+		
+		//window.close 关闭本窗口 
+		function xxg4()
+		{
+			window.close()
+		}
+		
+		//综合上面的作业：
+		function xxg5()
+		{
+			var xxg=confirm("是否打开输入对话框？")
+			if(xxg==true)
+			{
+				var xxgg=prompt("请输入你要打开的网址：","http://www.imooc.com/")
+				if(xxgg)
+				{
+					window.open(xxgg,'_blank','width=400px,hight=500px,menuber=no,toolbar=no');  
+				}
+				if(xxgg=="")
+				{
+					alert("你没有输入任何网址");
+				}
+				else {return;}				
+			}
+		}
+		</script>
+		
+		
+		<!-- 控制类名(className属性)   先 写个样式 -->
+		<style>
+		.one {
+				background-color:#4F4F4F;
+				color:white;
+				width:200px;
+			
+				}
+		</style>
+	</head>
+
+	
+	<body>
+		
+		<h1> 慕课网的JavaScript学习!</h1>
+		<input name="button" type="button" onclick="xxg1()" 
+		value="点击我，弹出关于 confirm 对话框">
+		<br><br>
+		
+		<input name="button" type="button" onclick="xxg2()" 
+		value="点击我，弹出关于 prompt 对话框">
+		<br><br>
+		
+		<input name="button" type="button" onclick="xxg3()"
+		value="点击我 用window.open功能打开新窗口（慕课网）">
+		<br><br>
+		
+		<input name="button" type="button" onclick="xxg4()"
+		value="点击我 用window.close功能 关闭本窗口！">
+		
+		<br><br>
+		<input name="button" type="button" onclick="xxg5();"
+		value="作业5">
+		
+		
+		<!-- 认识DOM （文档对象模型 Document Object Model）-->
+		<!-- 【通过ID获取元素】 结果:null或[object HTMLParagraphElement] -->
+		<br><br>
+		<p id="con">通过ID获取元素</p>
+		<script>
+			var mychar = document.getElementById("con");
+			document.write("结果:" + mychar);
+		</script>
+		
+		<!-- 【innerHTML属性】先用document.getElementById获得元素！ 设给一个变量“mychar” 
+			然后用“mychar.innerHTML”方法 来得到元素里面的内容！ -->
+		<br><br>
+		<p id="con2">mychar.innerHTML是得到元素内容的方法！<p>
+		<script>
+			var mychar = document.getElementById("con2");
+			document.write("获得元素内容为（原文）: 【" + mychar.innerHTML+"】<br>");
+			mychar.innerHTML=("【谢夏戈是个大帅哥】");
+			document.write("通过innerHTML得到的内容后进行修改（修改文）:  "+mychar.innerHTML);
+		</script>
+		
+		<!-- 【改变HMTL样式】一样先用document.getElementById 获得元素 设给一个变量“mychar” 
+			然后修改他的样式 比如（mychar.style.color）修改颜色-->
+		<!-- 其实我们还可以拓展！ 用按钮来触发！ 一触发就修改他的颜色！ （暂时不拓展）-->
+		<br><br>
+		<p id="con3">得到元素后修改样式 DOM </p>
+		<script>
+			var mychar = document.getElementById("con3");
+			mychar.style.color="red";
+			mychar.style.fontSize="20";
+			mychar.style.backgroundColor="blue";
+			mychar.style.width="300px";
+		</script>
+		
+		
+		<!-- 【显示和隐藏】（none）（block）-->
+		<script>
+			function xxgg2()
+			{
+				document.getElementById("con4").style="display:none";
+			}
+			function xxgg3()
+			{
+				document.getElementById("con4").style.display="block";
+			}
+		</script>
+		<h1>JavaScript</h1>
+		<p id="con4">这个是设置了一个按钮来控制这个连着ID的p标签
+		按钮的功能分别用了display的none和block 来隐藏 和显示！</p>
+		<form>
+			<input type="button" onclick="xxgg3()" value="显示内容"/>
+			<input type="button" onclick="xxgg2()" value="隐藏内容"/>
+		</form>
+		
+		
+		
+		
+		
+		<!-- 控制类名（className属性） -->
+		<p id="con5"> 按下这个按钮可以改变这个p的样式 用className！</p>
+		<input type="button" value="className改变样式" onclick="xxgg4()">
+		<input type="button" value="没有样式！" onclick="xxgg5()">
+		<script>
+			function xxgg4()
+			{
+				document.getElementById("con5").className=("one");
+			}
+			function xxgg5()
+			{
+				document.getElementById("con5").className=("");
+			}
+		</script>
+		
+		
+
+	
+		
+	</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "git.ignoreLimitWarning": true,
+    "editor.foldingStrategy": "auto",
+    "editor.showFoldingControls": "always",
+    "html.format.indentHandlebars": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorCustomizations": {},
+    "editor.renderIndentGuides": true,
+    "html.format.indentInnerHtml": true
+}

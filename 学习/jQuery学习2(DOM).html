@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery学习2(DOM)</title>
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+		
+	<script>   //  【】
+		//先抓取body 然后把创建的文档插入!
+		$("body").append($("<div>我是文本节点</div>"));
+		
+		
+		
+		// 【插入!】
+		// 【append()  】 			$('A'). append("B")  			A内部往后添加 B内容
+		//【appendTo()】				$('B'). appendTo("A")  			B内容 添加到A内部
+		
+		// 【prepend() 】		  	$('A'). prepend("B")    				A内部首位置 添加 一个B内容
+		// 【prependTo() 】       $('B).prepend("A")   				B内容 添加到   A内部首位置!
+		
+		//【after()】					$('A'). after("B") 				A内容 被 B元素插入到后面
+		//【before()	】				$('A'). before("B") 			A内容 被 B元素插入到前面
+//【其实这两个差不多 就是插与被插的关系....】
+		//【insertAfter() 】  		 $('A'). insertAfter("B") 			A内容插到	B元素后面
+		//【insertBefore()】			$('A'). insertAfter("B")			A内容插到 B元素前面
+		
+		
+		
+		
+		 //【删除!】
+		// 【 empty() 】    		 $("A").empty () 					A里面的内容被删除 但是A本身还在						
+		//  【remove()】			$("A").remove()					A全部被删除 包括本身
+		//empty 是清空内容里面的所有后代节点 不能删除本身这个节点
+		//remove 是该节点与该节点包含的所有后代同时删除 可以提供一个筛选的表达式 然后删除!
+		//【 detach() 】			$("A").detach()				A元素暂时隐藏起来(并非删除 数据还保留着!)
+		
+		
+		
+		
+		//  【拷贝!】 【替换!】【包裹!】
+		//【 clone() 】			$("A").clone()						克隆A节点    不克隆事件
+		//								$("A").chone(true)				克隆A节点 还克隆事件
+		
+		//【替换!】
+		//【 replaceWith()】	$("A").replaceWith("B")			在 A这个地方的内容 替换成B的内容
+		//【 replaceAll() 】	$("B").replaceAll("A")				把 B的内容  替换到  A这个地方的内容
+		
+		//【包裹!】
+		//【wrap()】		$("A").wrap(<div></div>)			给A这个元素添加一个包裹着它的外壳
+		//【wrapAll()】	$("A").wrapAll(<div></div>)			给A这个元素的全部  包裹着
+		//【wrapInner()】	$("A").wraplnner(<p></p>)		给A这个元素里面添加一个父级包裹
+		
+		//【删除包裹!】
+		//【unwrap()】	$("A").unwrap(<div></div>)		把A这个元素外壳的包裹删除掉!
+		
+		
+		
+		//【 遍历 】
+		//【children()】 	$("A").children()								抓取所有 A 元素的 所有子元素
+		//【find()】			$("A").find()									抓取所有 A 元素的	所有后代元素
+		//【parent()】		$("A").parent()								抓取所有 A 元素的 所有父级元素
+		//【parents()】 		$("A").parents()						抓取所有 A 元素的 所有祖辈元素
+		//【closest()】		$("A").closest()				抓取所有A元素 包括A元素和一个(符合的)祖辈元素 			
+		//【 next() 】		$("A").next()					抓取所有A元素 的同辈下一个元素
+		//【prev() 】			$("A").prev()					抓取所有A元素 的同辈上一个元素
+		//【siblings()】		$("A").siblings()				抓取所有A元素 的同辈的所有元素
+		//【	add() 】
+		
+		
+		
+		
+		
+		
+		//  【】  $("A")
+	</script>
+</body>
+</html>
