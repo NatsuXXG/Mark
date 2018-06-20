@@ -103,6 +103,16 @@
 
 
 
+	//[PHP命名空间(namespace)]
+	//用namespace来声明
+
+
+
+
+
+
+
+
 
 
 
