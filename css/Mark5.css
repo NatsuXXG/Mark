@@ -2,7 +2,7 @@
 
 body{ 	background:url(../images/yys.jpg) top center}/*背景图片!*/
 
-/*聊天框 */          /*【】 */  
+/*聊天框 */          /*【试一下】 */  
 .lt {/*聊天*/
 	width:300px;
 	height:100%;
@@ -362,7 +362,7 @@ hr{
 	list-style-type:none;
 	text-align:/center;
 	margin:5px 0px ;	}
-.xxg_left li a{//*【左边侧导航栏2】 */
+.xxg_left li a{/*【左边侧导航栏2】 */
 	width:140px;
 	left:10px;
 	padding-left:20px;

@@ -3,7 +3,7 @@
     "editor.foldingStrategy": "auto",
     "editor.showFoldingControls": "always",
     "html.format.indentHandlebars": true,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Default Dark+",
     "workbench.colorCustomizations": {},
     "editor.renderIndentGuides": true,
     "html.format.indentInnerHtml": true
