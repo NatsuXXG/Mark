@@ -1,0 +1,210 @@
+*{ margin:0;padding:0;}
+body{ background: ivory;}
+
+.top_fk{ /* 导航栏浮空 */
+  position:fixed;
+  top:0;
+  width:100%;
+  height:60px;
+  border-radius:0 0 7px 7px;
+  background-color: rgba(138, 43, 226,0.86); }
+  .top_menu{/*导航菜单栏*/
+    width:1000px;
+    height:60px;
+    margin: 0 auto;}
+ .top_x{/*主题*/
+    width:100px;
+    line-height:60px;
+    margin:0 auto;
+    list-style-type:none;
+    text-align: center;
+    font-size: 23px;
+    border-radius:0 0 10px 10px;
+    background-color: blueviolet;}
+
+
+.main{/*身体整体盒子*/
+  width:1200px;
+  min-height:500px;
+  margin:65px auto ;
+  background-color: /blue;}
+.left{/*左边盒子*/
+  width: 300px;
+  min-height: 100px;
+  margin:5px 10px;
+  border-radius:5px;
+  background-color: rgba(138, 43, 226,0.3);
+  float: left;}
+
+.mp{/*名片*/
+  width: 280px;
+  height:160px;
+  /* margin: 5px; */
+  border-radius:5px;
+  padding: 20px 10px;
+  background-color: blueviolet;}
+.mp img{/*头像*/
+  display: block;
+  width:100px;
+  height:100px;
+  margin:0px auto;
+  border-radius:100px;}
+.mp a{/*名片用户名*/
+  text-align: center;
+  font-size: 25px;
+  display:block;
+  width:280px;
+  line-height: 50px;
+  background-color:/ blue;
+  margin: 20px auto; 
+  word-wrap:break-word;}
+
+.add{/*写日志*/
+  text-decoration: none;
+  display: block;
+  width: 300px;
+  height: 50px;
+  margin: 5px 0px;
+  border-radius:5px;
+  font-size: 30px;
+  text-align: center;
+  color: aliceblue;
+  background-color: rgba(138, 43, 226,1);}
+.add:hover{
+  background-color: rgba(138, 43, 226,0.6);}
+
+.note-menu{/*日志菜单栏*/
+  width:290px;
+  height:600px;
+  /* margin:5px 0px; */
+  padding:  5px;
+  border-radius:5px;
+  overflow:auto;  }
+  /* background-color: rgba(138, 43, 226,0.5);} */
+
+/* 隐藏滚动条的方法! */
+.note-menu::-webkit-scrollbar {
+  display: none;
+  }
+.note-menu a{/*日志菜单*/
+  display: block;
+  text-decoration:none;
+  width: 260px;
+  height: 30px;
+  line-height:30px;
+  border-radius:5px;
+  padding: 5px 15px;
+  margin-bottom:10px;
+  color: #eff0f4;
+  word-wrap:break-word;/*防止单词溢出*/
+  overflow:hidden;
+  background-color: rgba(138, 43, 226,0.9);}
+.note-menu a:hover{
+  background-color: rgba(138, 43, 226,1);;}
+
+.note{/*日记*/
+  width:800px;
+  min-height:830px;
+  float: left;
+  padding:20px;
+  margin-top:5px;
+  border-radius: 5px;
+  background-color: #eff0f4;}
+.note h1{
+  text-align: center;
+  font-size: 40px;
+  word-wrap:break-word;/*防止单词溢出*/}
+.note span{
+  display: block;
+  text-align: center;
+  word-wrap:break-word;/*防止单词溢出*/}
+.note p{
+    font-size:30px;
+    word-wrap:break-word;/*防止单词溢出*/ }
+  
+
+
+
+
+.srk_fk{/*输入框_浮空*/
+  display: none;
+  top:0;
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color: rgba(0, 0, 0,0.1);}
+.srk{/*输入框*/
+  width: 1020px;
+  height: 760px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin: 100px auto;}
+.srk_gb{/*输入框_关闭*/
+  width: 100%;
+  height: 30px;
+  border-radius:5px 5px 0px 0px;
+  background-color: rgba(138, 43, 226,0.7);}
+.srk_gb #a1{
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 100px;
+  float: right;
+  margin: 10px 15px 10px 10px;
+  background-color: red;
+}
+.srk_gb #a2{
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 100px;
+  float: right;
+  margin: 10px;
+  background-color: yellow;
+}
+.srk_gb #a3{
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 100px;
+  float: right;
+  margin: 10px;
+  background-color: greenyellow;
+}
+.bt{/*标题*/
+  width:980px;
+  height:40px;
+  font-size: 30px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  resize:none;  /* 不让拖拉 */
+  margin: 10px 10px 10px;}
+.nr{/*内容*/
+  width: 980px;
+  height: 550px;
+  margin: 0px 10px;
+  font-size: 20px;
+  border-radius: 3px;
+  resize:none;  /* 不让拖拉 */
+  padding: 10px;}
+.srk span{/*字数*/
+  float: left;
+  font-size:20px;
+  margin:10px 0px 10px 30px;}
+.srk p{/*字数3*/
+  float: left;
+  font-size:20px;
+  margin:10px 0px;}
+.sub{/*保存日记按钮*/
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  float: right;
+  border: none;
+  border-radius: 3px;
+  background-color: blueviolet;
+  color:#ffffff;
+  font-size: 17px;}
+.sub:hover{ background-color: rgba(138, 43, 226,0.8);}
+
+  

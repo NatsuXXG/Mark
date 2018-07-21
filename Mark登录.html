@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8">
 		<title>Mark登录</title>
 		<link rel="stylesheet" href="css/MarkDL.css" type="text/css">
-
-
+		<script src="/js/jquery-3.3.1.js" type="text/javascript"></script>
+		<script src="/js/MarkDL.js" type="text/javascript"></script>
 	</head>
-
 
 
 	<body>
@@ -16,21 +14,16 @@
 		<div class="dl" id="dl" style="display:block">
 			<h5>ฅ^•ﻌ•^ฅ</h5>
 			<h1>Mark登录</h1>
-			<form align="action_page.php" method="POST">
-				<div class="yh">
+			<form method="POST" action="/PHP/MarkDL.php">
+				<div class="name">
 					<!--用户框-->
 					<img src="images/用户.png" width="22px" height="22px">
-					<input type="text" name="xxg">
+					<input type="text" name="name" class="nname">
 				</div>
-				<div class="mm">
+				<div class="mima">
 					<!--密码框-->
 					<img src="images/密码.png" width="22px" height="22px">
-					<input type="password" name="mima">
-				</div>
-				<!--复选框-->
-				<div class="fxk">
-					<input type="checkbox" name="记住密码">记住密码
-					<input type="checkbox" name="自动登录">自动登录
+					<input type="password" name="mima" class="mmima">
 				</div>
 
 				<!--登录按钮框-->
@@ -39,49 +32,39 @@
 					<a href="javascript:ZC()">帐号注册!</a>
 					<a href="#">忘记密码</a>
 				</div>
-				<input class="dlan" type="button" value="开发者XXG临时登录3" onclick="DL3()">
-				<input class="dlan" type="button" value="开发者XXG临时登录4" onclick="DL4()">
-				<input class="dlan" type="button" value="开发者XXG临时登录5" onclick="DL5()">
+
 			</form>
 		</div>
 
+
+
+
+
+
+
 		<!-- 这个是事先隐藏起来的注册框!-->
-		<div class="zck" id="zck" action="PHP/MarkDL.php"style="display:none">
+		<div class="zck" id="zck" style="display:none">
 			<h5>ฅ^•ﻌ•^ฅ</h5>
 			<h1>Mark注册</h1>
-			<form align="" method="POST">
+			<form action="/PHP/MarkZC.php" method="POST">
 				<div class="sign_up">
 					<!--用户框-->
-					<input type="text" name="name" placeholder="用户名/登录名">
+					<input type="text" name="fname" placeholder="昵称">
 				</div>
 				<div class="sign_up">
-					<input type="text" name="mima" placeholder="登录密码">
+					<input type="text" name="fmima" placeholder="密码">
+				</div>
+				<div class="sign_up">
+					<input type="text" name="phone" placeholder="手机号">
 				</div>
 				<!-- <div class="sign_up">
-					<input type="text" name="xxg" placeholder="再次输入密码">
-				</div>
-				<div class="sign_up">
-					<input type="text" name="xxg" placeholder="电话号码">
-				</div>
-				<div class="sign_up">
-					<input type="text" name="xxg" placeholder="验证码">
+					<input type="text" name="yzm" placeholder="验证码">
 				</div> -->
 				<input type="submit" value="注册" class="zcqx">
 				<input type="button" value="取消" onclick="GB()" class="zcqx">
 			</form>
 		</div>
 		<script>
-			//无帐号 临时登录方法!
-			function DL3() {
-				window.open('file:///C:/XXG/Mark/Mark3.HTML', '_self');
-			}
-			function DL4() {
-				window.open('file:///C:/XXG/Mark/Mark4.HTML', '_self');
-			}
-			function DL5() {
-				window.open('file:///C:/XXG/Mark/Mark5.HTML', '_self');
-			}
-
 			//注册框!! 显示出来的方法!
 			function ZC() {
 				document.getElementById("zck").style = "display:block";

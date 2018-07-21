@@ -51,9 +51,11 @@
 	echo "<br>";
 
 	//当前时间 时
-	$t=date("H");
-	echo $t."点";
-
+	$H=date("H")+8;
+	$M=date("m");
+	$s=date("s");
+	$T=$H." : ".$M." : ".$s;
+	echo $T;
 	//switch()
 	//case
 	//default
@@ -66,7 +68,7 @@
 	//$ABC = array("XXG"=>"100","YT"=>"0"); 类似字典
 	//遍历数组 ($ABC as $x=>$x_value)
 
-	//sort()   				数组升序
+	//sort()   			数组升序
 	//rsort()				数组降序
 	//asort()				根据数组的-值 进行升序
 	//arsort()						 -值 	 降序
@@ -107,9 +109,10 @@
 	//用namespace来声明
 
 
-
-
-
+	// 使用 PHP trim() 函数去除用户输入数据中不必要的字符 (如：空格，tab，换行)。
+	// 使用PHP stripslashes()函数去除用户输入数据中的反斜杠 (\)
+	// 通过$_SERVER["REQUEST_METHOD"]来检测表单是否被提交
+	// empty — 检查一个变量是否为空
 
 
 

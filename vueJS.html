@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue js</title>
+        <script src="Vue/vue.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div v-text="xxg1"></div>
+            <div v-html="xxg2"></div>
+            <p>{{ xxg3 }}</p>
+            
+            <div v-on:click="xxgg1">{{xxg4}}</div>
+            <div @click="xxgg1">{{xxg4}}</div>
+            <div v-bind:title="xxg5">hello world</div>
+            <div :title="xxg5">hello world</div>
+           
+            <input v-model="xxg6"/> <!-- 双向绑定 -->
+            <div>{{xxg6}}</div>
+
+            姓:<input v-model="xxg71"/>
+            名:<input v-model="xxg72"/>
+            <div>{{xxgg2}}</div>
+            <div>{{count}}</div>
+        </div>
+        <script>
+        new Vue({
+            // 挂载点
+            el:'#app',
+            // 数据
+            data: {
+                xxg1: "<h1>xxg1</h1>" ,
+                xxg2: "<h1>xxg2</h1>",
+                xxg3: "xxg3",
+                xxg4: "'@'是绑定事件的简写xxg4",
+                xxg5: "':'是修改属性的简写xxg5",
+                xxg6: "ok!",
+                xxg71: "",
+                xxg72: "",
+                count: 0 ,
+            },
+            // 功能
+            methods:{
+                xxgg1:function(){
+                    this.xxg4 ="谢夏戈真帅"
+                }
+            },
+            //计算
+            computed:{
+                xxgg2:function(){
+                    return this.xxg71+' '+this.xxg72
+                },
+            },
+            //监听
+            watch:{
+                xxgg2:function(){
+                    this.count++
+                },
+            },
+        })     
+        </script>
+
+
+
+
+
+    </body>
+</html>
