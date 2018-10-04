@@ -17,6 +17,8 @@ background-image:linear-gradient{线性渐变}
 background-image:radial-gradient{径向渐变}
 ([颜色,颜色,颜色...])
 
+
+
 【【文本】】
 text-overflow{设置溢出文本用"省略标记"}:
 [clip 剪切]或[ellipsis 显示省略号]

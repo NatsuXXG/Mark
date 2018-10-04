@@ -1,0 +1,13 @@
+{
+    "xxg":[
+            {"x1":"g1","x2":"g2"},
+            {"y1":"t1","y2":"t2"},
+
+            {"evall()":"JavaScript内建函数 可使json转化为JavaScript"},
+            {}
+    ]
+}
+
+
+
+

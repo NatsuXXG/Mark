@@ -1,0 +1,71 @@
+
+
+
+
+.box1 {
+    box-sizing: border-box;
+    width:700px;
+    height:1000px;
+    overflow: hidden;
+    border: 3px solid ;
+    position: relative;
+    border-radius:5px;
+}
+
+.box2 img {
+    width:700px;
+    height: 1000px;
+    float: left;
+}
+.box2 {
+    position:absolute;
+    left:-700px;
+    width: 4900px;
+    height: 1000px;
+}
+
+
+.button_box {
+    position: absolute;
+    width:300px;
+    height:30px;
+    left: 200px;
+    bottom: 30px;
+    /* background-color: aqua; */
+}
+.button_box span{
+
+    cursor:pointer;/*不同的光标*/
+    
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    border:1px solid #fff;
+    background-color: rgba(0, 0, 0,0.7);
+    float: left;
+    margin:0 13px;
+}
+
+.button_box .on{
+    background-color: orangered;
+}
+
+.arrow {
+    width: 100px;
+    line-height: 100px;
+    background-color: rgba(0, 0, 0,0.5);
+    position: absolute;
+    top:400px;
+    font-size: 60px;
+    text-align:center;
+    text-decoration: none;
+    color: aliceblue;
+    border-radius:5px;
+}
+#prev { 
+    left: 10px;
+}
+#next { 
+    right: 10px;
+}

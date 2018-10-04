@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Vue js</title>
+        <title>Vue.js学习</title>
         <script src="Vue/vue.min.js"></script>
     </head>
     <body>
@@ -11,24 +11,78 @@
             <div v-html="xxg2"></div>
             <p>{{ xxg3 }}</p>
             
+            <!-- 事件绑定:点击 -->
             <div v-on:click="xxgg1">{{xxg4}}</div>
             <div @click="xxgg1">{{xxg4}}</div>
+<br/>
+            <!-- 事件绑定:绑定属性 -->
             <div v-bind:title="xxg5">hello world</div>
             <div :title="xxg5">hello world</div>
-           
-            <input v-model="xxg6"/> <!-- 双向绑定 -->
+<br/>        
+            <!-- 双向绑定 -->
+            <input v-model="xxg6"/>
             <div>{{xxg6}}</div>
-
+<br/>
+            <!-- 双向绑定 计算方法和监听方法 -->
             姓:<input v-model="xxg71"/>
             名:<input v-model="xxg72"/>
             <div>{{xxgg2}}</div>
             <div>{{count}}</div>
+<br/>
+            <!-- v-if -->
+            <div v-if="xxg8_1"> hello xxg8_1</div>
+            <button @click="xxgg8_1">v-if</button>
+<br/>
+            <!-- v-show -->
+            <div v-show="xxg8_2"> hello xxg8_2</div>
+            <button @click="xxgg8_2">v-show</button>
+<br/>
+            <!-- v-for -->
+            <ul><!-- index是下标 用来增加渲染效果-->
+                <li v-for="(item,index) of xxg8_3" :key="index">{{item}}</li>
+            </ul>
+<br/>
+            <!-- todolist功能开发 -->
+            <div>
+                <input v-model="xxg9"/>
+                <button @click="xxgg9">提交</button>
+                <ul>
+                    <li v-for="(item,index) of list" :key="index" :content="item">{{item}}</li>
+                </ul>
+            </div>
+
+            <!-- todolist组件拆分 -->
+            <div>
+                <input v-model="xxg9"/>
+                <button @click="xxgg9">提交</button>
+                <ul>
+                    <todo-item></todo-item>
+                </ul>
+            </div>
+
+
+
+
         </div>
         <script>
+        // 全局组件
+        Vue.component('todo-item',{
+            props:['content'],
+            template:'<li>全局组件:compoent 配合模版:template</li>',
+        })
+        // 局部组件
+        var todoitem = {
+            template:'<li>居部组件:先</li>',
+        }
+        
         new Vue({
             // 挂载点
             el:'#app',
-            // 数据
+            //局部组件
+            components:{
+            'todo-item2' = todoitem ,
+            },
+            
             data: {
                 xxg1: "<h1>xxg1</h1>" ,
                 xxg2: "<h1>xxg2</h1>",
@@ -39,11 +93,26 @@
                 xxg71: "",
                 xxg72: "",
                 count: 0 ,
+                xxg8_1: true,
+                xxg8_2: true,
+                xxg8_3: [1,2,3],
+                xxg9:   '',
+                list: [],
             },
             // 功能
             methods:{
                 xxgg1:function(){
-                    this.xxg4 ="谢夏戈真帅"
+                    this.xxg4 ="谢夏戈真帅";
+                },
+                xxgg8_1:function(){
+                    this.xxg8_1=!this.xxg8_1;
+                },
+                xxgg8_2:function(){
+                    this.xxg8_2=!this.xxg8_2;
+                },
+                xxgg9:function(){
+                    this.list.push(this.xxg9);
+                    this.xxg9 = '';
                 }
             },
             //计算
@@ -58,6 +127,13 @@
                     this.count++
                 },
             },
+            
+
+
+
+
+
+
         })     
         </script>
 

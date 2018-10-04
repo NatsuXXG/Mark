@@ -2,6 +2,9 @@
 .css{
     background-color: aqua; 
     border-bottom:slategray 2px solid; 
+    /* 盒子模型 */
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 /* 图片圆角 */
@@ -134,8 +137,13 @@
     animation: xxgg 1s ease-out ;
 }
 
-
-
+.css10_1{
+    width: 500px;
+    min-height: 100px;
+    padding:5px;
+    border:1px solid green;
+    columns:200px  2;
+}
 
 
 
