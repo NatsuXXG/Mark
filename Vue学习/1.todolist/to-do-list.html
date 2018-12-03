@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>to-do-list</title>
+
+    <script src="Vue/vue.min.js"></script>
+    <link rel="stylesheet" href="css/todo.css" />
+</head>
+<body>
+
+
+    
+    <div id="app">
+        <h1 class="t-mid h-1"> to-do list</h1>
+        <div id="app2">
+            <input type="text" v-model="Mytodo"  id="input-1"/>
+            <button v-on:click="todolist" id=button-1>+</button>
+        </div>
+        <ol id="goto">
+            <p class="t-mid p-1"><b>进行中</b></p>
+            <li v-for="item in list">{{item}}</li>
+        </ol>
+        <ol id="okto">
+            <p class="t-mid p-1"><b>已完成</b></p>
+            <li></li>
+        </ol>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                list:[],
+                Mytodo:"",
+            },
+            methods:{
+                todolist:function(){
+                    this.list.push(this.Mytodo)
+                    this.Mytodo=""
+                }
+            },
+        })
+    </script>
+</body>
+</html>

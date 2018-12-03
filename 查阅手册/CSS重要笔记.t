@@ -1,7 +1,7 @@
 /* 隐藏滚动条的方法! */
 .note-menu::-webkit-scrollbar {     
   display: none;
-  }
+}
 
 
 /* 清除浮动代码 */
@@ -9,7 +9,8 @@
     display:block;
     content:'';
     clear:both;
-    height:0;}
+    height:0;
+}
 
 .clearfix {
   zoom: 1;
