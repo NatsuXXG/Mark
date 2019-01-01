@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>作用域插槽</title>
+    <script src="../Vue/vue.min.js"></script>
+</head>
+<body>
+
+    <div id="root"></div>
+        <child>
+            <!-- 作用域插槽必须以  template 标签 -->
+            <template slot-scope="props">
+                        <!-- 从子组件接收到的东西放到 = props  -->
+                <h1>{{props.item}}</h1>
+                <!-- 接收到的东西以<h1>的方式展示 -->
+            </template>
+        </child>
+    <script>
+
+        Vue.component('child',{
+            date:function(){
+                return {
+                    list: [1,2,3,4]
+                }
+            },
+            template:`<div>
+                        <ul>
+                            <slot v-for="item of list" :item=item>
+                                
+                            </slot>
+                        </ul>
+                      </div>`
+        })
+
+        var vm = new Vue ({
+            el: "#root",
+        })
+    </script>
+</body>
+</html>

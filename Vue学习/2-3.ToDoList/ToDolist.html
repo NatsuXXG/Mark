@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
    
-    <title>to-do-list</title>
+    <title>ToDoList</title>
 
-    <script src="Vue/vue.min.js"></script>
+    <script src="../Vue/vue.min.js"></script>
     <link rel="stylesheet" href="css/todo.css" />
 </head>
 <body>
@@ -18,14 +18,14 @@
             <input type="text" v-model="Mytodo"  id="input-1"/>
             <button v-on:click="todolist" id=button-1>+</button>
         </div>
-        <ol id="goto">
+        <ul id="goto">
             <p class="t-mid p-1"><b>进行中</b></p>
             <li v-for="item in list">{{item}}</li>
-        </ol>
-        <ol id="okto">
+        </ul>
+        <ul id="okto">
             <p class="t-mid p-1"><b>已完成</b></p>
             <li></li>
-        </ol>
+        </ul>
     </div>
 
     <script>

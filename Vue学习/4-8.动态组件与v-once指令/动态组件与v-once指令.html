@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>动态组件与v-once指令</title>
+    <script src="../Vue/vue.min.js"></script>
+</head>
+<body>
+    
+    <div id="root">
+        <!-- 动态组件<component> -->
+            <component :is = 'type'></component>
+            <!-- 动态组件会随着is改变成对应的组件 -->
+
+
+        <!--
+        <child-one v-if="type === 'child-one'"></child-one>
+        <child-two v-if="type === 'child-two'"></child-two> 
+        -->
+
+        <button @click='handleBtnClick'>change</button>
+    </div>
+
+    <script>
+        // v-once会把创建出来的组件放到内存里 不会因为if隐藏显示的关系把组件删除了又重新创建出来,这样会很耗费性能.
+        Vue.component('child-one',{
+            template:'<div v-once> child-one </div>',
+        })
+
+        Vue.component('child-two',{
+            template:'<div v-once> child-two </div>',
+        })
+
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                type: 'child-one',
+            },
+            methods:{
+                handleBtnClick:function(){
+                    this.type = (this.type === 'child-one' ? 'child-two' : 'child-one');
+                }
+            }
+        })
+    </script>
+</body>
+</html>
