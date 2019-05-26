@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>条件渲染</title>
+    <script src="../Vue/vue.min.js"></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <!--    v-if决定这个标签 是否 '存在'      -->
+        <div v-if="show" data-test="v-if">{{message}}</div>
+
+        <!--    v-show决定这个标签 是否 '隐藏'    -->
+        <div v-show="!show" data-test="v-show">{{message}}</div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data:{
+                show:false,
+                message: "Hello World",
+            }
+        })
+    </script>
+
+</body>
+</html>

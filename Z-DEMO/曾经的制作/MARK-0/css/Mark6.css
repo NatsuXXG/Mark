@@ -1,0 +1,243 @@
+* {margin:0; padding:0;}
+body{background: url(/images/vsc3.png)}
+/**/
+.navbar_fixed{/*导航栏固定*/
+    position:fixed;
+    top:0px;
+    width:100%;
+    height:50px;
+    background-color: rgba(255, 255, 255,0.2);
+    border-radius:5px;}
+.navbar{/*导航栏盒子*/
+    width:1200px;
+    height: 50px;
+    margin:auto;
+    background-color:/red}
+.navbar li{/*导航栏*/
+    list-style-type:none;
+    float: left;
+    background-color:/ blue ;}
+.navbar li a{
+    margin:0 20px;
+    text-align: center;
+    display: block;
+    width:60px;
+    line-height: 50px;
+    text-decoration: none;
+    color: aliceblue;
+    background-color:/ brown;}
+.navbar li a:hover{
+    color: antiquewhite;}
+
+.mp{/*名片*/
+    width:220px;
+    height: 50px;
+    float:left;
+    border-radius:5px;}
+.mp img{
+    width:40px;
+    height: 40px;
+    border-radius:100px;
+    margin:5px;
+    float: left;}
+.mp a{
+    display: block;
+    line-height: 50px;
+    width:100px;
+    float: left;
+    margin:0 10px;
+    background-color:/ aqua;}
+
+.main{/*主身体*/
+    width:1220px;
+    min-height:850px;
+    background-color: /black;
+    margin:60px auto 0px;}
+
+.main_left{/*左边导航栏*/
+    width: 250px;
+    height: 800px;
+    background-color: rgba(255, 255, 255,0.2);
+    position:fixed;
+    border-radius:5px}
+
+.main_mid{/*中间主体*/
+    width: 700px;
+    height: 800px;
+    background-color: azure;
+    margin-left:260px;
+    float: left;
+    border-radius:5px;
+    overflow: auto;}
+.main_mid::-webkit-scrollbar{
+    display: none;}
+
+.main_right{/*右边盒子*/
+    width: 250px;
+    height: 600px;
+    background-color:/ brown;
+    float: left;
+    margin-left: 10px;}
+.main_right_fk{/*右边浮空盒子*/
+    width:250px;
+    min-height:500px;
+    position:fixed;
+    background-color: rgba(255, 255, 255,0.2);
+    border-radius:5px;}
+
+
+
+
+
+
+
+
+
+
+/*Note 左边 添加日记按钮 日记菜单栏*/
+.add{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 240px;
+    line-height: 50px;
+    background-color: darkslategray;
+    font-size: 30px;
+    margin:5px;
+    border-radius:5px;
+    color: aliceblue;}
+.note-menu{
+    width:230px;
+    height: 715px;
+    margin: 10px 5px;
+    padding: 5px;
+    border-radius:5px;
+    background-color: rgba(255, 255, 255,0.2);
+    overflow:auto;}
+.note-menu::-webkit-scrollbar {/*隐藏滚动条*/
+    display: none;}
+.note-menu a{
+    padding: 0 10px;
+    display: block;
+    text-decoration: none;
+    width:210px;
+    height: 40px;
+    line-height:40px;
+    border-radius:5px;
+    margin-bottom:5px;
+    color: aliceblue;
+    background-color:rgba(255, 255, 255,0.2);
+    word-wrap:break-word;
+    overflow: hidden;}
+/* 中间 日记展示*/
+.note{
+    width: 680px;
+    min-height: 680px;
+    background-color: azure;
+    border-radius:5px;
+    padding: 10px;}
+.note h1{text-align: center;}
+.note span{
+    display: block;
+    text-align: center;}
+.note p{ word-wrap: break-word;}
+/*删除按钮*/
+.note a{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width:60px;
+    line-height: 30px;
+    background-color: rgb(12, 12, 44);
+    color: #ffffff;
+    font-size: 17px;
+    float: right;}
+.note a:hover{
+    background-color: rgb(27, 25, 36);
+}
+
+/*输入框*/
+.srk_fk{/*输入框_浮空*/
+    display: none;
+    top:0;
+    width:100%;
+    height:100%;
+    position:fixed;
+    background-color: rgba(0, 0, 0,0.1);}
+.srk{/*输入框*/
+    width: 850px;
+    height: 500px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 100px auto;}
+.srk_gb{/*输入框_关闭盒子*/
+    width: 100%;
+    height: 30px;
+    border-radius:5px 5px 0px 0px;
+    background-color: rgb(33, 40, 46);}
+.srk_gb #a1{
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+    float: right;
+    margin: 10px 15px 10px 10px;
+    background-color: red;}
+.srk_gb #a2{
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+    float: right;
+    margin: 10px;
+    background-color: yellow;}
+.srk_gb #a3{
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+    float: right;
+    margin: 10px;
+    background-color: greenyellow;}
+.bt{/*标题*/
+    width:800px;
+    height:25px;
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    resize:none;  /* 不让拖拉 */
+    margin: 10px 15px;}
+.nr{/*内容*/
+    width: 800px;
+    height: 300px;
+    margin: 0px 15px;
+    font-size: 20px;
+    border-radius: 3px;
+    resize:none;  /* 不让拖拉 */
+    padding: 10px;}
+.srk span{/*字数*/
+    float: left;
+    font-size:20px;
+    margin:10px 0px 10px 30px;}
+.srk p{/*字数3*/
+    float: left;
+    font-size:20px;
+    margin:10px 0px;}
+.sub{/*保存日记按钮*/
+    width: 100px;
+    height: 50px;
+    margin: 10px 15px;
+    float: right;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(17, 15, 37);
+    color:#ffffff;
+    font-size: 18px;}
+.sub:hover{ background-color: rgb(46, 47, 49);}
+/*Note结束*/
+
+
+
+
+
+

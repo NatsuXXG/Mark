@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>set和get</title>
+    <script src="../Vue/vue.min.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        {{fullName}}
+    </div>
+
+    <script>
+        var vm = new Vue ({
+            el : "#app",
+            data:{
+                firstName:"XIE",
+                lastName:"XIAGE",
+            },
+            computed:{
+                fullName: {
+                    // 得到
+                    get:function(){
+                     return this.firstName + " " + this.lastName
+                    },
+                    // 设置
+                    set:function(value){
+                        // 用split打散成数组
+                        var arr = value.split(" ");
+                        this.firstName = arr[0];
+                        this.lastName = arr[1];
+                    }
+                }
+            }
+
+        })
+    
+    </script>
+</body>
+</html>

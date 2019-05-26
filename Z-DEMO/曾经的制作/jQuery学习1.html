@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>jQuery学习1</title>
+    <style type="text/css">
+    </style>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript">//【】
+			//用$ 来得到元素
+            $(document).ready(function() { 
+				//等页面的文档（document）中的节点都加载完毕后，再执行后续的代码因为我们在执行代码的时候，可能会依赖页面的某一个元素，我们要确保这个元素真正的的被加载完毕后才能正确的使用
+                $("div").html("你好!通过慕课网学习jQuery次啊是最佳的途径.")
+            });
+			//可以 把 $ 与 DOM 可以互转!
+			
+			//【jQuery选择器!】
+			//jq可以     元素选择器 $("element")      类选择器 $(".class")       id选择器$("#id")
+			// $("*") 是选择全部元素 的意思!
+		
+			///【jQuery 层级选择器】///
+			//子选择器  $("div > p")
+			//后代选择器 $("div  p")
+			//相邻兄弟选择器 $("div + p") [不会向前选择] 选择所有紧接在“div”元素后的“p”元素
+			//一般兄弟选择器 $("div ~ p") [不会向前选择] 匹配“div”元素之后的所有 兄弟元素。具有相同的父元素，并匹配过滤“p”选择器
+			
+			
+			///【jQuery 基本筛选 选择器 】[选择某个元素里的哪个元素][根据元素选元素]
+			//第一个$(:first)					举例: $(.class:first) 找到第一个类
+			//最后一个$(:last)
+			//偶数个$(:even)
+			//奇数个$(:odd)
+			//选第几个$(:eq(?))
+			//选?数之后的$(:gt(?))
+			//选?数之前的$(:lt(?))
+			//不选这个用$(:not())
+			
+			//【jQuery 内容筛选 】
+			//选择所有包含指定内容的元素 $(":contains('?')")      		 通过/根据 内容来找
+			//选择元素中至少包含指定选择器的元素 $(":has(?元素)")   通过/根据 元素来找
+			//选择含有子元素或者文本的元素 $("a:parent")                 有内容的a会被选中
+			//选择没有含子元素或文本的元素 $("a:empty")                 没有内容的a会被选中
+			
+			//【jQuery 可见性筛选】
+			//选择所有显示的元素$(":visible")
+			//选择所有隐藏的元素$(":hidden")
+			
+			//【jQuery 选择器之 属性选择器】
+			//$('div[name=p1]')						查找所有div中，属性name=p1的div元素
+			//$('div[p2]')							查找所有div中，有属性p2的div元素
+			//$('div[name|="-"]')					查找所有div中，有属性name中的值只包含一个连字符“-”的div元素
+			//$('div[name~="a"]') 			   	   	查找所有div中，有属性name中的值包含一个连字符“空”和“a”的div元素
+			//$('div[name^=imooc]') 				查找所有div中，属性name的值是用imooc开头的
+			//$('div[name$=imooc]')  				查找所有div中，属性name的值是用imooc结尾的
+			//$('div[name*="test"]')				查找所有div中，有属性name中的值包含一个test字符串的div元素
+			//$('div[testattr!="true"]') 			查找所有div中，有属性testattr中的值没有包含"true"的div
+		
+			//【jQuery选择器之子元素筛选选择器】
+			//$('.first-div a:first-child')			查找class="first-div"下的第一个a元素  针对所有父级下的第一个
+			//$('.first-div a:last-child')			查找class="first-div"下的最后一个a元  针对所有父级下的最后一个
+			//$('.first-div a:only-child')			查找class="first-div"下的只有一个子元素的a元素  
+			//$('.last-div a:nth-child(2)') 		查找class="last-div"下的第二个a元素
+			//$('.last-div a:nth-last-child(2)') 	查找class="last-div"下的倒数第二个a元素
+		
+			//【jQuery选择器之表单元素选择器】
+			//$(':input') 						:input 选择器基本上选择所有表单控件
+			// $('input:text')				匹配所有input元素中类型为text的input元素
+			//$('input:password')			匹配所有input元素中类型为password的input元素
+			//$('input:radio')				匹配所有input元素中的单选按钮,并选中
+			//$('input:checkbox')			匹配所有input元素中的复选按钮,并选中
+			//$('input:submit')				匹配所有input元素中的提交的按
+			//$('input:image')				匹配所有input元素中的图像类型的元
+			//$('input:button')				匹配所有input元素中类型为按钮的元素
+			//$('input:file')					匹配所有input元素中类型为file的元素
+			
+			//【 jQuery选择器之表单对象属性筛选选择器】
+			//$('input:enabled') 				查找所有input所有可用的（未被禁用的元素）input元素。
+			//$('input:disabled')				查找所有input所有不可用的（被禁用的元素）input元素。
+			//$('input:checked')				查找所有input所有勾选的元素(单选框,复选框)
+			//$('input:selected')				查找所有option元素中,有selected属性被选中的选项
+		
+			//【jQuery选择器之特殊选择器this】
+			//$(this)  							当前元素
+		
+		
+		
+		
+		
+		
+		
+		//【以下是 在选择器 选择完后 要进行的一些 方法!】
+		
+		
+		//【 .attr()与.removeAttr() 】    (方法)	  jQuery的属性与样式之    用attr()方法来获取和设置元素属性,attr是attribute（属性）的缩写   [getAttribute]
+		//attr(传入属性名)：获取属性的值
+		//attr(属性名, 属性值)：设置属性的值
+		//attr(属性名,函数值)：设置属性的函数值
+		//.removeAttr( attributeName ) : 为匹配的元素集合中的每个元素中移除一个属性（attribute）
+		
+		
+		//【 html()及.text() 】(方法)   jQuery的属性与样式之
+		//$('').html($('').html)       显示出html方法获取到的内容 		.html()是整个html文档结构
+		//$('').text($('').text)			显示出text方法获取到的内容		.text()是文本内容的合集
+		//$('').html('')				通过.html()方法替换html结构
+		//$('').text('')				通过.text()方法替换文本内容
+		
+		
+		//【 .val() 】(方法)  jQuery的属性与样式之    ( 处理表单元素的值  )
+		//.val 用来读取 或者修改表单里的东西 和html 一样
+		
+		
+		//【 .addClass() 】(方法)   jQuery的属性与样式之增加样式
+		//.addClass()        用来添加样式 类
+		
+		
+		//【 .removeClass() 】(方法)   jQuery的属性与样式之删除样式.
+		//.removeClass()     用来删除样式 类
+		
+		
+		//【 .toggleClass()  】  (方法)    jQuery的属性与样式之切换样式
+		//.toggleClass()      用来切换样式(会互斥)
+		//.toggleClass("c",true)  true会添加"c"的样式     false会删除"c"的样式
+		
+		
+		//【 .css() 】  (方法)         jQuery的属性与样式之样式操作
+		//.css("background-color")				 获取背景颜色
+		//.css("background-color","red")	设置背景颜色
+		//其他的类似 以此类推!!
+		//.css({											设置多种样式!
+		//			"font-size" :"15px",
+		//			"border"	:"1px solid"	
+		//			})       
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//【】
+    </script>
+</head>
+	
+	
+<body>
+    <div>没有东西!</div>
+</body>
+</html>

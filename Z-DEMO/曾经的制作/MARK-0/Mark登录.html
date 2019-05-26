@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mark登录</title>
+		<link rel="stylesheet" href="css/MarkDL.css" type="text/css">
+		<script src="/js/jquery-3.3.1.js" type="text/javascript"></script>
+		<script src="/js/MarkDL.js" type="text/javascript"></script>
+	</head>
+
+
+	<body>
+		<!--这个是默认出现的登录框!-->
+		<div class="dl" id="dl" style="display:block">
+			<h5>ฅ^•ﻌ•^ฅ</h5>
+			<h1>Mark登录</h1>
+			<form method="POST" action="/PHP/MarkDL.php">
+				<div class="name">
+					<!--用户框-->
+					<img src="images/用户.png" width="22px" height="22px">
+					<input type="text" name="name" class="nname">
+				</div>
+				<div class="mima">
+					<!--密码框-->
+					<img src="images/密码.png" width="22px" height="22px">
+					<input type="password" name="mima" class="mmima">
+				</div>
+
+				<!--登录按钮框-->
+				<input class="dlan" type="submit" value="登录">
+				<div class="zc">
+					<a href="javascript:ZC()">帐号注册!</a>
+					<a href="#">忘记密码</a>
+				</div>
+
+			</form>
+		</div>
+
+
+
+
+
+
+
+		<!-- 这个是事先隐藏起来的注册框!-->
+		<div class="zck" id="zck" style="display:none">
+			<h5>ฅ^•ﻌ•^ฅ</h5>
+			<h1>Mark注册</h1>
+			<form action="/PHP/MarkZC.php" method="POST">
+				<div class="sign_up">
+					<!--用户框-->
+					<input type="text" name="fname" placeholder="昵称">
+				</div>
+				<div class="sign_up">
+					<input type="text" name="fmima" placeholder="密码">
+				</div>
+				<div class="sign_up">
+					<input type="text" name="phone" placeholder="手机号">
+				</div>
+				<!-- <div class="sign_up">
+					<input type="text" name="yzm" placeholder="验证码">
+				</div> -->
+				<input type="submit" value="注册" class="zcqx">
+				<input type="button" value="取消" onclick="GB()" class="zcqx">
+			</form>
+		</div>
+		<script>
+			//注册框!! 显示出来的方法!
+			function ZC() {
+				document.getElementById("zck").style = "display:block";
+				document.getElementById("dl").style = "display:none";
+			}
+			function GB() {
+				document.getElementById("zck").style = "display:none";
+				document.getElementById("dl").style = "display:block";
+			}
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- -->
+		<meta charset="utf-8">
+		
+		<!--为搜索引擎定义关键词 -->
+		<meta name="keywords" content="黑白">
+		
+		<!--为网页定义描述内容 -->
+		<meta name="description" content="微型博客">
+		
+		<!--定义网页作者 -->
+		<meta name="author" content="谢夏戈">
+		
+		<title>首页-黑白</title>
+		
+		<!--网页的默认设置 图片会被影响 
+		<base href="http://www.runoob.com/" target="_blank">
+		-->
+		
+		<!--内部样式表 -->
+		<style >
+		p {text-align:center;}
+		</style>
+		
+		
+		<!-- CSS的ID和class -->
+		<style>
+		#left{ text-align:left}
+		#para{ text-align:center; color:red;}
+		.center{ text-align:center; color:blue;}
+		</style>
+		
+		
+		
+		<!-- CSS的背景 -->
+		<style>
+		body {background-color:#b0c4de;}
+		</style>
+		
+		
+		
+		
+		<!-- CSS链接-->
+		<!--link 未访问时 -->
+		<!-- visited 已访问后 -->
+		<!--hover 鼠标遇上 -->
+		<!-- active 鼠标点击 -->
+		<style>
+		a:link,a:visited
+		{
+			display:block;
+			font-weight:bold;
+			color:#FFFFFF;
+			background-color:#98bf21;
+			width:120px;
+			text-align:center;
+			padding:4px;
+			text-decoration:none;
+		}
+		a:hover,a:active
+		{
+			background-color:#7A991A;
+		}
+		</style>
+			
+		
+		
+		<!-- CSS盒子模型 -->
+		<style>
+		<!-- div   暂时不用 浏览器有点奇怪
+		{
+			background-color:lightgrey;
+			width:200px;
+			border:25px ;
+			padding:25px;
+			margin:25px;
+		}
+		-->
+		</style>
+	
+		
+		<!-- CSS定位fixed -->
+		<style>
+		p.pos_fixed
+		{	
+			color:white;
+			position:fixed;
+			top:30px;
+			right:5px;
+		}
+		</style>
+		
+		<!-- (自定义)CSS定位fixed -->
+		<style>
+		div.xxgg
+		{	
+			background-color:#ff1493;
+			position:fixed;
+			width:60px;
+			border:10px;
+			padding:5px;
+			
+			
+			color:#000000;
+			
+			top:200px;
+			right:5px;
+		}
+		</style>
+		<!-- (自定义在线客服)CSS定位fixed -->
+		<style>
+		div.zxkf
+		{	
+			background-color:#ffffff;
+			position:fixed;
+			width:50px;
+			border:10px;
+			padding:5px;
+			
+			
+			color:#000000;
+			
+			top:500px;
+			right:5px;
+		}
+		</style>
+		
+		<!-- CSS粘性定位！sticky -->
+		<style>
+		div.sticky
+		{
+			position:-webkit-sticky;
+			position:sticky;
+			top:0;
+			padding:5px;
+			background-color:#cae8ca;
+			border: 2px solid#4caf50;
+		}
+		</style>
+		
+		<!-- CSS导航栏 -->
+		<style>
+		ul{
+			list-style-type:none;
+			margin:0;
+			padding:0;
+		}
+		</style>
+		
+		<!-- CSS垂直导航栏 -->
+		<style>
+		ul{
+			list-style-type:none;
+			margin:0;
+			padding:0;
+			width:200px;
+			background-color:#f1f1f1;
+		}
+		li a {
+			display:block;
+			color:#000;
+			padding:8px 16px;
+			text-decoration:none;
+		}
+		</style>
+		
+		
+		
+		
+		
+		
+
+	</head>
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<body>
+		<h1 style="text-align:center;">这是一个通过内联方式居中的标题</h1>
+		<p>这是一个段落</p>
+		<a href="file:///C:/XXG/HTML/第一页.HTML"target="_blank">第一页</a>
+		<a href="file:///C:/XXG/HTML/第二页.HTML" target="_blank">第二页</a><br>
+		
+		<!--  图片链接 -->
+		<p id="left">这是一个图片链接:<a href="http://www.baidu.com" target="_blank"> <img src="百度.png" width=30 height=30/></a></p>
+		<!-- br是空一行的意思 -->
+		<br>
+		
+		
+		<!-- 水平线-->
+		<hr>
+		
+		<!-- 文本格式化 -->
+		<b>加粗</b>
+		<i>斜体</i>
+		<em>着重文字</em>
+		<small>小号字体<small>
+		<del>删除字</del>
+		<strong>加重语气 跟加粗很像</strong>
+		<br>
+		
+		<!--图像 -->
+		<img src="xxg.jpg" width=30 height=30/>	
+		
+		<!--表格 -->
+		<table border="1">
+			<!--每一行开始用tr-->
+			<tr>
+				<td>第一行第一个</td>
+				<td>第一行第二个</td>
+				<td>第一行第三个</td>
+			</tr>
+			<tr>
+					<!-- 行头可以用th -->
+				<th>第二行第一个</th>
+				<td>第二行第二个</td>
+			</tr>
+		</table>
+		
+		
+		<!-- 无序列表 -->
+		<ul>
+			<li>无序第一个</li>
+			<li>无序第二个</li>
+		</ul>
+		
+		<!-- 有序列表-->
+		<ol>
+			<li>有序第一个</li>
+			<li>有序第二个</li>
+		</ol>
+		
+		
+		<!-- 还有自定义列表的-->
+		
+		
+		<!-- div的用法 像一个大盒子一样 把块级元素包括进来 然后一起 定义这些块级元素 -->
+		<!-- div布局 -->
+	
+	
+		<!-- span的用法 像个小盒子一样  在块级元素里面去改变块级元素的一点点 -->
+		
+		
+		
+		<!-- 表单： -->
+		<!-- 文本域 -->
+		<form>
+			用户: <input type="text" name="lastname">
+		</form>
+		<!-- 密码字段 -->
+		<form>
+			密码: <input type="password" name="password">
+		</form>
+		<!-- 单选按钮-->
+		<form>
+			<input type="radio" name="1" value="第一个单选">第一个单选
+			<input type="radio" name="1" value="第二个单选">第二个单选
+		</form>
+		<!-- 多选按钮 -->
+		<form>
+			<input type="checkbox" name="3" value="第一个多选">记住密码
+			<input type="checkbox" name="3" value="第二个多选">自动登录
+		</form>
+		<!-- 提交按钮 -->
+		<form>
+			<input type="submit" value="登录">
+		</form>
+		
+		
+		<!-- 框架 --><!--frameborder="0"是移除边框的意思 -->
+		<iframe src="http://www.runoob.com/" width="800" height="400" frameborder="0"></iframe>
+		<br>
+		
+		
+		<!-- 接下来要学的叫 脚本  script   (JavaScript)-->
+		<script>
+			document.write("Hello World!")
+		</script>
+		<!-- noscript 是给那些不能支持Script的浏览器看的-->
+		<script>
+			document.weite("浏览器能支持Script就能看到这段字")
+		</script>
+		<noscript>如果浏览器不支持JavaScript就只能看到这段字</noscript>
+		<script>
+			document.write("<p style='text-align:left;'>这是用javascript写的一个脚本段落</p>")
+		</script>
+		<!-- JavaScript事件响应 -->
+		<p id="xxg"> JavaScript	可以触发事件 就像按键点击。</p>
+		<script>
+			function XXG()
+				{
+					document.getElementById("xxg").innerHTML="Hello";
+				}
+		</script>
+		<button type="button" onclick="XXG()">点击，将改变上面的文字</button>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- 接下来 我们来学习CSS -->
+		
+		<!-- id选择器: 在head上 已经用style声明了 id为para的东西会按照para里写的进行了 -->
+		<p id="para"> 他会像在头head里的style写的那样效果呈现出来！</p>
+		
+		<!-- 以下示范的是 类class选择器 -->
+		<p class="center"> 这个是类选择器选择了在头head的style里定义的类的效果 所呈现出来的</p>
+		
+		<!-- 【以下这些命令都可以写在头head的style风格里面来定义】-->
+		<!-- CSS背景：-->
+		<!-- 背景颜色：background-color:     -->
+		<!-- 背景图像：background-image:url() -->
+		<!-- 让背景图片水平方向平铺： background-repeat:repeat-x;  -->
+		<!-- 让背景图片不平铺      ： background-repeat:no-repeat; -->
+		<!-- 设置背景图片定位      ： background-position:right top; -->
+		
+		
+		<!-- CSS文本：-->
+		<!-- 文本颜色：color：-->
+		<!-- 文本对齐方式： text-align:   center是居中 right是靠右 left是靠左 justify不知道       -->
+		<!-- 删除链接下划线： text-decoration:none	<!-- 1文本修饰 2文本转换 3文本缩进 -->
+		
+		
+		<!-- CSS字体Fonts -->
+		<!--  字体大小： font-size:10px -->
+		<!-- 用em来设置字体大小： -->
+		
+		
+		<!-- CSS链接 -->
+		<!--  👆 在头head 文件上-->
+		
+		
+		<!-- 列表样式 -->
+		<!-- 无序列表：list-sytle-type:circle;     或者 square;      -->
+		<!-- 有序列表：list-sytle-type:upper-roman;或者 lower-alpha; -->
+		
+		
+		<!-- 表格 -->
+		<!-- 可以在head的style里用 border 改变表格框距-->
+		<!--                    用 width和height改变宽度和高度 -->
+		<!--                    用 text-align:    来让表格里的文字对齐-->
+		<!-- padding:15px 改变填充-->
+		<!-- background-color: 改变背景颜色 color: 文字颜色-->
+		
+		
+		
+		
+		
+		
+		
+		<!-- CSS盒子模型 -->
+		<!-- Margin(外边距) Border(边框) Padding(内边距) Content(内容) -->
+		<div> 这是盒子里面的内容 盒子经过了改装  先暂时不用改装 浏览器有点问题。。。</div>
+		
+		
+		<!-- CSS的边框属性：运用到<p>上的-->      <!-- 【border】 -->
+		<!-- border-style 用来设置边框属性的（需要用到可以百度查） -->
+		<!-- border-width 设置边框宽度 -->
+		<!-- border-color 设置边框颜色-->
+		<!-- 还可以单独设置各个边 上:dotted, 右:solid, 底:double, 左:dashed,-->
+		
+		
+		<!-- CSS轮廓（outline）-->  <!-- 【outline】 -->
+		<!-- outline-color 轮廓颜色； outline-style 轮廓样式 outline-width 轮廓宽度 -->
+		
+		
+		<!-- CSS外边距-->       <!-- 【margin】 -->
+		<!-- margin-top 顶层外边距； 还有 bottom 底层；left左边 right右边-->
+		
+		
+		<!-- CSS填充（内边距）--><!-- 【padding】 -->
+		<!-- padding-top 顶层外边距； 还有 bottom 底层；left左边 right右边-->
+		
+		
+		
+		
+		
+		<!-- CSS分组   和   嵌套选择器-->
+		
+		
+		<!-- CSS尺寸 Dimension -->
+		
+		
+		<!-- CSS显示 --><!-- Display（显示）与Visibility（可见性） -->
+		<!-- 隐藏元素-display:none 或 visibility:hidden 但是用后者还是会占用空间，虽然隐藏了元素 -->
+		
+		<!-- 
+			display可以改变列表的排列方式！ 或者说是显示的方式
+			在style里 改变列表的横排  li{display:inline;}
+									spen{display:block;}
+		-->
+		
+		
+		
+		
+		<!-- CSS定位 --><!-- Position -->
+		<!-- static定位 --><!--  position:static;  -->
+		<!-- position:fixed-->
+		<p class="pos_fixed"> 拨打热线：4444-44444444 </p>
+		<div class="xxgg">极限挑战！</div>
+		<div class="zxkf">在线客服<img src="xxg.jpg" width="50" height="50"></div>
+		
+		<!-- position:relative;       left:-20px (位置:相对的)-->
+		<!-- absolute定位 -->
+		<div class="sticky"> 我是粘性定位！</div>
+		<div style="padding-bottom:">
+			<p>滚动我</p>
+		</div>
+		
+		
+		
+		
+		<!-- CSS浮动Float -->
+
+		
+		
+		<!-- CSS布局 对齐！-->
+		<!-- 元素居中对齐可以用 margin：auto -->
+		<!-- 文本居中对齐可以用 text-align:center; -->
+		<!-- display:block是创建一个块元素 可以把东西放到这个块里面来 比如把照片放在这个块里面 
+		然后设置这个块居中就可以使图片跟着居中 -->
+		<!-- 比如：在head的style里：
+			img{ dispaly: block;   margin: 0 auto;
+			在body里：
+			<img src="图片位置" alt="名字" 然后设置长宽> 
+		-->
+		<!-- 还可以使用定位来对齐 position:absolute;-->
+		<!-- 也可以使用浮动float方式来 对齐 -->
+		
+		<!-- 垂直对齐 可以用padding-->
+		
+		
+		
+		<!-- CSS组合选择符 -->
+		<a href="https://www.runoob.com/css/css-combinators.html" targer="_blank">菜鸟教程里面教《组合选择符》</a>
+		
+		
+		<!-- 伪类:用来添加一些选择器的特殊效果-->
+		
+		
+		
+		<!-- CSS垂直导航栏！-->
+		<ul>
+			<li><a href="#1">导航栏一</a></li>
+			<li><a href="#2">导航栏二</a></li>
+			<li><a href="#3">导航栏三</a></li>
+			<li><a href="#4">导航栏四</a></li>
+		</ul>
+		<!-- 还有水平导航栏！ -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		<!-- -->
+	</body>
+</html>

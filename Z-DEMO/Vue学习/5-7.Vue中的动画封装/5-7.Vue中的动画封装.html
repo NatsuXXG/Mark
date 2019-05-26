@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Vue中CSS动画原理</title>
+    <script src="../Vue/vue.min.js"></script>
+
+
+</head>
+<body>
+    
+    <div id="root">
+        <fade :show="show">
+                <div>hello world</div>
+        </fade>
+        
+        <button @click="handleClick">切换</button>
+    </div>
+
+    <script>
+
+        // 动画封装: 封装成一个组件
+        Vue.component('fade',{
+            // 先在这个组件当中接收一下这个数据
+            props:['show'],
+            // 然后建立一个模版 
+            // 模版里调用了transition这个过渡标签 
+            // 并且用js来实现css样式
+            template:`
+                <transition @before-enter="handleBeforeEnter"
+                            @enter="handleEnter">
+                <slot v-if="show"></slot>
+                </transition>
+                `,
+            methods:{
+                handleBeforeEnter:function(el){
+                    el.style.color = 'red'
+                },
+                handleEnter:function(el,done){
+                    setTimeout(()=> {
+                        el.style.color = 'green'
+                        done()
+                    },2000)
+                }
+            }
+        })
+
+
+        var vm = new Vue({
+            el:'#root',
+            data: {
+                show: true,
+            },
+            methods:{
+                handleClick:function(){
+                    this.show = !this.show
+                }
+            }
+        })
+    </script>
+</body>
+</html>

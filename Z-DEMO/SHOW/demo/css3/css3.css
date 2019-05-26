@@ -1,0 +1,159 @@
+/* 各个盒子的统一效果 */
+.css{
+    background-color: aqua; 
+    border-bottom:slategray 2px solid; 
+    /* 盒子模型 */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* 图片圆角 */
+.css1 img{
+    border-radius:10px;
+}
+
+/* 阴影效果 */
+.css2 img{
+    box-shadow:2px 2px 2px ;
+}
+
+/* 边框图片 */
+.css3_1{/*平铺*/
+    width: 100px;
+    height: 100px;
+    
+    border:10px solid #ccc;
+    border-image:url(bilibili.png) 100 round;
+}
+.css3_2{/*重复*/
+    width: 100px;
+    height: 100px;
+    
+    border:10px solid #ccc;
+    border-image:url(bilibili.png) 100 repeat;
+}
+.css3_3{/*拉伸*/
+    width: 100px;
+    height: 100px;
+    
+    border:10px solid #ccc;
+    border-image:url(bilibili.png) 100 stretch;
+}
+
+
+/* 渐变 */
+.css4_1{
+    width: 300px;
+    height:100px;
+    line-height: 100px;
+    text-align:center;
+    font-size:40px;
+    background-image:linear-gradient(90deg, red,orange,yellow,green,blue,indigo,violet);
+}
+.css4_2{
+    width: 300px;
+    height:100px;
+    line-height: 100px;
+    text-align:center;
+    font-size:40px;
+    background-image:radial-gradient(red,orange,yellow,green,blue,indigo,violet);
+}
+/* 文本溢出 */
+.css5_1{
+    width: 300px;
+    height: 20px;
+    background-color: burlywood;
+    overflow:hidden;/*隐藏多出来的字*/
+    white-space:nowrap;/*白色-空间:不换行*/
+    text-overflow:ellipsis;/*文本的溢出处理方法*/
+}
+/* 文本阴影 */
+.css6_1{
+    font-size:50px;
+    text-shadow:3px 3px 3px ;
+}
+
+/* 旋转 */
+.css7_1{
+    width: 200px;
+    height: 200px;
+    line-height: 300px;
+    text-align: center;
+    background-color: \burlywood;
+    transform:rotate(45deg);
+}
+.css7_2{
+    width: 200px;
+    height: 200px;
+    line-height: 300px;
+    text-align: center;
+    transform:skew(30deg);
+}
+.css7_3{
+    width: 200px;
+    height: 200px;
+    line-height: 300px;
+    text-align: center;
+    transform:scale(2,1.5);
+}
+.css7_4{
+    width: 200px;
+    height: 200px;
+    line-height: 300px;
+    text-align: center;
+    transform:translate(200px,50px);
+}
+
+
+
+.css8_1{/*动画过渡*/
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin:20px;
+    transition:background-color 2s ease;
+}
+.css8_1:hover{
+    background-color: orange;
+}
+
+
+
+.css9_1{
+    width:300px;
+    height: 300px;
+    background-color: red;
+    margin:20px;
+}
+@keyframes xxgg{
+    0%{background-color: red;}
+    20%{background-color: blue;}
+    40%{background-color: orange;}
+    60%{background-color: green;}
+    80%{background-color: yellow;}
+    100%{background-color: red;}
+}
+.css9_1:hover{
+    animation: xxgg 1s ease-out ;
+}
+
+.css10_1{
+    width: 500px;
+    min-height: 100px;
+    padding:5px;
+    border:1px solid green;
+    columns:200px  2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Vue中CSS动画原理</title>
+    <script src="../Vue/vue.min.js"></script>
+
+    <!-- 调用animate库  -->
+    <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+    
+    <div id="root">
+        <!-- 被transition(过渡)标签包裹着 可以实现动画 -->
+        <transition 
+            name="fade"
+            enter-active-class="animated swing"
+            leave-active-class="animated shake"  >
+        <!-- 动画过渡'开始'的 类= "先一个默认样式 自己选择的样式" -->
+        <!-- 动画过渡'消失'的 类= "先一个默认样式 自己选择的样式" -->
+                <div v-show="show">hello world</div>
+        </transition>
+        
+        <button @click="handleClick">切换</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'#root',
+            data: {
+                show: true,
+            },
+            methods:{
+                handleClick:function(){
+                    this.show = !this.show
+                }
+            }
+        })
+    </script>
+</body>
+</html>

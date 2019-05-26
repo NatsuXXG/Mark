@@ -1,0 +1,127 @@
+<!DOCTYPE html><!-- -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mark3</title>
+	<link rel="stylesheet" href="css/Mark3.css" type="text/css">
+	<script src="js/Mark1.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<div id="ltk" class="lt" style="display:none"><!--【聊天窗口】-->	
+		<div class="lt_x" style="text-align:center;"><!-- 聊天框上的栏! -->
+			<p> 聊天 </p>
+			<div class="lt_xx">   <!-- 聊天框的关闭按钮盒子 -->
+			<a href="javascript:guanbi()">
+			<img src="images/关闭.png" width="30px" height="30px"/>
+			</a>
+			</div>	
+		</div>
+		
+		<div class="lt_lxr">
+			<ul>
+				<li><a href="javascript:lxr()">联系人</a></li>
+				<li><a href="javascript:xiaoxi()">消息</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="lt_open" class="lt_open" style="display:block">
+		<a href="javascript:dakai()">
+		<img src="images/消息.png" width="50px" height="50px">
+		</a>
+	</div>
+	<script>
+		function guanbi(){
+			document.getElementById("ltk").style="display:none";
+			document.getElementById("lt_open").style="display:block";
+		}
+		function dakai(){
+			document.getElementById("ltk").style="display:block";
+			document.getElementById("lt_open").style="display:none";			
+		}
+		
+		function xiaoxi(){
+			
+		}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="xxg"><!--【整体】-->
+		<div class="xxg_top"><!-- 顶端盒子-->
+			<div class="xxg_top_menu"><!-- 顶端导航栏-->
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">音乐</a></li>
+					<li><a href="#">游戏</a></li>
+					<li><a href="#">直播</a></li>
+					<li><a href="#">视频</a></li>
+					<li style="float:right"><a href="file:///C:/XXG/Mark/Mark%E7%99%BB%E5%BD%95.html">退出</a></li>
+					<li style="float:right"><a href="#">Natsu谢夏戈</a></li>
+					<div class="ssl">
+						<form>
+							<input type="text" name="wd" class="ssl_text" placeholder="搜索、找人"/>
+							<input type="submit" value="" class="ssl_button"/>
+						</form>
+					</div>
+				</ul>
+			</div>
+
+		</div>
+		
+		<div class="main">
+		    <div class="main_left"><!--左边侧导航栏-->
+				<li><a href="file:///C:/Mark/Mark1.html">Mark1</a></li>
+				<li><a href="file:///C:/Mark/Mark2.html"target="_blank">Mark2</a></li>
+				<li><a href="file:///C:/Mark/Mark3.html"target="_blank">Mark3</a></li>
+				<li><a href="file:///C:/Mark/Mark4.html"target="_blank">Mark4</a></li>
+				<li><a href="file:///C:/Mark/Mark5.html"target="_blank" onclick="xxgg1()">Mark5</a></li>
+			</div>
+			<div class="main_mid">
+				<div class="xx">发布的信息1</div><!--中间身体！-->
+				<div class="xx">发布的信息2</div>
+				<div class="xx">发布的信息3</div>
+				<div class="xx">发布的信息4</div>
+				<div class="xx">发布的信息5</div>
+			</div>
+			<div class="main_right"><!--右边侧导航栏-->
+				<ul>
+					<li><a href="#">自定义+</a></li>
+					<li><a href="#">❤特别关注</a></li>
+					<li><a href="#">追剧记录</a></li>
+					<li><a href="#">好友圈</a></li>
+					<li><a href="#">笔记</a></li>
+					<hr>
+					<p>【设计网页】</p>
+					<li><a href="file:///C:/XXG/HTML/HTML练习.HTML"target="_blank">HTML</a></li>
+					<li><a href="file:///C:/XXG/HTML/CSS练习.HTML"target="_blank">CSS练习</a></li>
+					<li><a href="file:///C:/XXG/HTML/布局.HTML"target="_blank">CSS布局</a></li>
+					<li><a href="file:///C:/XXG/HTML/第二页.HTML">CSS样式</a></li>	
+					<li><a href="file:///C:/XXG/HTML/JS基础.HTML"target="_blank">JS基础</a></li>	
+					<li><a href="file:///C:/XXG/HTML/JS进阶.HTML"target="_blank">JS进阶</a></li>
+					<li><a href="file:///C:/XXG/HTML/JS进阶2.HTML"target="_blank">JS进阶2</a></li>
+					<li><a href="file:///C:/XXG/HTML/JS进阶3.HTML"target="_blank">JS进阶3</a></li>
+					<li><a href="file:///C:/XXG/HTML/JS进阶4.HTML"target="_blank">JS进阶4</a></li>
+					<li><a href="file:///C:/XXG/HTML/优秀js.HTML"target="_blank">优秀JS</a></li>
+					<li><a href="file:///C:/XXG/HTML/ฅ՞•ﻌ•՞ฅ.html"target="_blank">ฅ՞•ﻌ•՞ฅ</a></li>		
+					<li><a href="file:///C:/XXG/HTML/居居侠.HTML"target="_blank">居居侠</a></li>		
+					<li><a href="file:///C:/XXG/HTML/登录.HTML"target="_blank">登录</a></li>	
+					<li><a href="file:///C:/XXG/HTML/试验.HTML"target="_blank">试验</a></li>
+					<li><a href="file:///C:/XXG/HTML/jQuery学习1.HTML"target="_blank">jQuery学习1</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>2-7子组件向父组件传递数据.信息</title>
+
+    <script src="../Vue/vue.min.js"></script>
+</head>
+<body>
+    
+    <div id="root">
+        <input type="text" v-model="Myinput">
+        <button @click="MyClick">提交</button>
+        <ul>
+            <todo-item :content="item"
+                        :index="index"
+                        v-for="(item,index) in list" 
+                        @delete="ItemDelete">
+            </todo-item>
+        </ul>
+    </div>
+
+    <script>
+        // 封装成组件
+        //局部组件.
+        var TodoItem = {
+            props: ['content','index'],
+            template: "<li @click='ItemClick'>{{content}}</li>",
+            methods: {
+                ItemClick: function(){
+                    this.$emit("delete",this.index);
+                    // 子组件向外触发事件用this.$emit
+                    //等发出了"delete"这个型号给外部然后父组件接收该信号
+                }
+            }
+        }
+
+        // 要在vue当中声明 有这个局部组件
+        var app = new Vue({
+            el: '#root',
+            components: {
+                TodoItem:TodoItem
+            },
+
+            data: {
+                Myinput:"",
+                list:[],
+            },
+            methods: {
+               MyClick:function(){
+                this.list.push(this.Myinput)
+                // push推送
+                this.Myinput=""
+                },
+
+                //在父组件中@监听方法后在这边处理
+                ItemDelete:function(index){
+                    this.list.splice(index,1)
+                    // splice删除 index 删除一项
+                }
+            }
+        })
+    </script>
+</body>
+</html>

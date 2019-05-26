@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html</title>
+
+
+    <link rel="stylesheet" href="css.css" />
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <h1>标题1</h1>
+    <p>段落</p>
+    <img src="imgs/1.jfif" alt="图片加载不出来的描述"><div>图片也是内联元素</div>
+
+    <select name="select" id="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected >3</option>
+    </select>
+
+    <ul>
+        <li>无序列表1</li>
+        <li>无序列表2</li>
+    </ul>
+
+    <ol>
+        <li>有序列表1</li>
+        <li>有序列表2</li>
+    </ol>
+
+    <a href="www.baidu.com">a标签链接(百度)</a>
+    <a href="www.baidu.com" target="_blank">跳转链接(百度)</a>
+
+    <b>加粗标签(b)</b>
+    <i>斜体(i)</i>
+
+    <table>
+        <tr>
+            <th>nmae</th>
+            <th>age</th>
+        </tr>
+        <tr>
+            <td>谢夏戈</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>xxg</td>
+            <td>18</td>
+        </tr>
+    </table>
+
+    <form action="" method="">
+        <fieldset>
+            <legend>尝试表单标签</legend>
+
+            <label for="text">text:</label>
+            <input type="text" id="text"><br/>
+            <label for="password">password:</label>
+            <input type="password" id="password"><br/>
+            <label for="radio">radio:</label>
+            <input type="radio" id="radio"><br/>
+            <label for="checkbox">checkbox:</label>
+            <input type="checkbox" id="checkbox"><br/>
+            <label for="submit">submit:</label>
+            <input type="submit" id="submit"><br/>
+            <label for="reset">reset</label>
+            <input type="reset" id="reset"><br/>
+        </fieldset>
+        
+
+        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+    </form>
+
+    <!-- html5新标签 -->
+    <h1>HTML5新标签</h1>
+    <audio src="" controls >音频</audio>
+    <video src="">视频</video>
+
+    <script>
+            function allowDrop(ev){
+            ev.preventDefault();
+            }
+            
+            function drag(ev){
+            ev.dataTransfer.setData("Text",ev.target.id);
+            }
+            
+            function drop(ev){
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+            }
+    </script>
+
+    <img id="drag1" src="imgs/2.jfif" draggable="true" ondragstart="drag(event)" />
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"  style="width:700px;height:700px;padding:10px;border:1px solid #aaaaaa;"> </div>
+
+    <input list="xxg" name="xxgg">
+    <datalist id="xxg">
+      <option value="1">
+      <option value="2">
+      <option value="3">
+      <option value="4">
+      <option value="5">
+    </datalist>
+
+     
+   <a href="#" class="a_class">a标签</a>
+
+   <ul class="ul_class">
+       <li>1</li>
+       <li>1</li>
+       <li>1</li>
+   </ul>
+
+   <div class="text_box">
+        This is some long text that will not fit in the box This is some long text that will not fit in the box This is some long text that will not fit in the box his is some long text that will not fit in the box  This is some long text that will not fit in the box This is some long text that will not fit in the box
+   </div>
+
+
+   <div class="img_class"></div>
+
+   <img src="imgs/4.jfif" class="img_img">
+   <img src="imgs/4.jfif" class="img_img2">
+   <img src="imgs/4.jfif" class="img_img3">
+   <img src="imgs/4.jfif" class="img_img4">
+   <img src="imgs/4.jfif" class="img_img5">
+   <img src="imgs/4.jfif" class="img_img6">
+
+
+   
+
+
+
+
+
+
+</body>
+</html>

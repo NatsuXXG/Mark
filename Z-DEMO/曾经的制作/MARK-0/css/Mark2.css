@@ -1,0 +1,128 @@
+*{ margin:0; padding:0;}
+
+.ad
+{	
+	height:500px;
+	width:350px;
+	overflow:hidden;/*当溢出范围 会隐藏掉*/
+	margin:0px auto;
+	top:200px;
+}
+img{
+	height:500px;
+	width:350px;
+}
+
+/*搜索栏2的样式表*/
+.ssl2{
+	width:305px;
+	height:40px;
+	background-color:#fff;
+	margin:20px auto;	
+
+}
+.ssl3{
+	width:305px;
+	height:40px;
+	background-color:#fff;
+	margin:20px auto;	
+
+}
+
+.logo {
+	background:url(../images/baidu.png) no-repeat;/* ../是父级 返回父级 */
+	width:40px;
+	height:50px;
+	float:left;
+	margin:3px;
+}
+
+.ssl_text{
+	font-size:20px;
+	margin:6px 5px 5px 5px;
+	width:200px;
+	height:28px;
+	border:0;
+	float:left;
+	outline:none;/*去除高亮部分*/
+	background-color:#eeeeee;
+}
+.ssl_button{
+	border:0;
+	background:url(../images/搜索.png) no-repeat;
+	background-size:30px 30px;/*设置背景图片的尺寸*/
+	width:30px;
+	height:30px;
+	margin:4px;
+	float:left;
+}
+
+/*下拉菜单*/
+.xiala {
+	width:198px;
+	background-color:#fff;
+	border:1px solid #999;
+}
+.xiala ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.xiala ul li{
+	line-height:25px;
+	padding:3px;
+	cursor:pointer;/*使li的内容可以点击 选择 有小手!*/
+}
+.xiala ul li:hover{
+		text-decoration:underline;/*设置成有下划线效果*/
+		background-color:#e5e5e5;
+}
+	
+	
+	
+
+/*全文收起*/
+#pn{
+	background-color:#e8e8e8;
+	width:200px;
+	display:block;
+	margin:0 auto;
+	padding:5px;
+	height: auto;
+}	
+.pp{
+	margin:0 auto;
+	padding:0;
+	width:200px;
+	border-top:solid 4px gray;
+}	
+.ppp{
+	background-color:gray;
+	width:50px;
+	height:30px;
+	text-align:center;
+	margin:0 auto;
+	display:block;
+	color:#fff;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

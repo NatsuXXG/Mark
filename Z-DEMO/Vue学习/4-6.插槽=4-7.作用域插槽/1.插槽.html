@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>在Vue中使用插槽</title>
+    <script src="../Vue/vue.min.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <child>
+            <!-- 具名插槽:给插槽起一个名字  -->
+            <div class="header" slot="header">header</div>
+            <div class="footer" slot="footer">footer</div>
+            <!--         可以\也可以不用. 给slot起名字 -->
+        </child>
+    </div>
+
+    <script>
+        //    slot就是插槽
+        Vue.component('child',{
+            template: `<div> 
+                        <slot name='header'>默认值</slot> 
+                        <div class='content'> content </div>
+                        <slot name='header'></slot> 
+                       </div>`
+        })          //如果没有传入对应的slot 就会使用默认值
+
+        var vm = new Vue ({
+            el: "#root",
+        })
+    </script>
+</body>
+</html>

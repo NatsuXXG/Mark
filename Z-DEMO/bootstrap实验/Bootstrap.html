@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>谢夏戈作品'bootstrap测试'展示</title>
+    <link rel="stylesheet" href="./css/bs.css">
+    <script src="./jq/jquery-3.3.1.js"></script>
+
+    <!-- bootstrap的👇 -->
+    <!--   视口             内容 = " 宽度=设备宽度 ,     初始比例尺"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- bootstrap的css与js -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="top_nav">
+        <div class="navv">
+            <div class="logo">
+                (๓˙ϖ˙๓)
+            </div>
+            <div class="top_mid">
+            bootstrap测试
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要 -->
+    <div class="main">
+        <div class="title">
+            <h1> —— bootstrap测试 —— </h1>
+        </div>
+        
+        
+        <div class="container xxgh1">
+            <!-- 表格 -->
+            <h1> 表格: </h1>
+            
+            <table class="table table-dark table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>表格标题1</th>
+                        <th>表格标题2</th>
+                        <th>表格标题3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1表格内容1</td>
+                        <td>1表格内容2</td>
+                        <td>1表格内容3</td>
+                    </tr>
+                    <tr>
+                        <td>2表格内容1</td>
+                        <td>2表格内容2</td>
+                        <td>2表格内容3</td>
+                    </tr>
+                    <tr>
+                        <td>3表格内容1</td>
+                        <td>3表格内容2</td>
+                        <td>3表格内容3</td>
+                    </tr>
+                </tbody> 
+            </table>
+<hr/>
+
+        <!-- 图片效果 -->
+            
+<hr/>     
+
+        
+        <!-- 按钮  -->
+        
+            <h1>单个按钮:</h1>
+                <button type="button" class="btn btn-success">
+                    成功</button>
+                <button type="button" class="btn btn-primary">
+                    主要</button>
+                <button type="button" class="btn btn-info">
+                    信息</button>
+                <button type="button" class="btn btn-warning">
+                    警告</button>
+                <button type="button" class="btn btn-danger">
+                    危险</button>
+                <button type="button" class="btn btn-secondary">
+                    不重要</button>
+                <button type="button" class="btn btn-dark">
+                    暗夜</button>
+                <button type="button" class="btn btn-light">
+                    光明</button>
+ <hr/>
+
+            <h1>按钮组:</h1>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success">
+                    成功</button>
+                <button type="button" class="btn btn-primary">
+                    主要</button>
+                <button type="button" class="btn btn-info">
+                    信息</button>
+                <button type="button" class="btn btn-warning">
+                    警告</button>
+                <button type="button" class="btn btn-danger">
+                    危险</button>
+                <button type="button" class="btn btn-secondary">
+                    不重要</button>
+                <button type="button" class="btn btn-dark">
+                    暗夜</button>
+                <button type="button" class="btn btn-light">
+                    光明</button>
+                <button type="button" class="btn btn-outline-success">
+                    绿边按钮
+                </button>
+            </div>
+ <hr/>
+
+            <h1>下拉按钮(内嵌式):</h1>
+            <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                内嵌下拉按钮
+            </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">内嵌下拉1</a>
+                    <a class="dropdown-item" href="#">内嵌下拉2</a>
+                </div>
+            </div>
+ <hr/>
+
+            <h1>下拉按钮(分离式):</h1>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">
+                    分离下拉按钮
+                </button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class='caret'></span>
+                </button>
+                <div class="dropdown-menu">
+                    <h5 class="dropdown-header">下拉标题头</h5>
+                    <a class="dropdown-item" href="#">分离下拉1</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">分离下拉2</a>
+                </div>
+            </div> 
+ <hr/>       
+      
+
+        <!-- 徽章 -->
+        <h1>徽章:</h1>
+        <span class="badge badge-success">徽章</span>
+        <h1>徽章<span class="badge badge-success">New</span></h1>
+        <h2>徽章<span class="badge badge-dark">New</span></h2>
+        <h3>徽章<span class="badge badge-info">New</span></h3>
+<hr/>   
+
+
+        <!-- 进度条 -->
+        <h1>进度条:</h1>
+        <h3>普通进度条:</h3>
+        <div class="progress">
+            <div class="progress-bar" style="width:80%">80%</div>
+        </div>  <br/>
+        <h3>条纹进度条:</h3>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" style="width:80%">80%</div>
+        </div>  <br/>
+        <h3>动画进度条:</h3>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%">80%</div>
+        </div>  <br/>
+<hr/>
+
+        <!-- 分页类 -->
+        <h1>分页:</h1>
+        <ul class="pagination">
+            <li class="page-item active"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link">2</a></li>
+            <li class="page-item"><a class="page-link">3</a></li>
+            <li class="page-item"><a class="page-link">4</a></li>
+            <li class="page-item"><a class="page-link">5</a></li>
+            <li class="page-item"><a class="page-link">6</a></li>
+            <li class="page-item"><a class="page-link">7</a></li>
+            <li class="page-item"><a class="page-link">8</a></li>
+            <li class="page-item"><a class="page-link">9</a></li>
+            <li class="page-item"><a class="page-link">10</a></li>
+        </ul>
+        <h1>面包屑导航:</h1>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a>1</a></li>
+            <li class="breadcrumb-item"><a>2</a></li>
+            <li class="breadcrumb-item"><a>3</a></li>
+            <li class="breadcrumb-item"><a>4</a></li>
+            <li class="breadcrumb-item"><a>5</a></li>
+            <li class="breadcrumb-item"><a>6</a></li>
+            <li class="breadcrumb-item"><a>7</a></li>
+            <li class="breadcrumb-item"><a>8</a></li>
+            <li class="breadcrumb-item"><a>9</a></li>
+            <li class="breadcrumb-item"><a>10</a></li>
+        </ul>
+<hr/>
+
+        <!-- 列表组 -->
+        <h1>列表组:</h1>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success">列表1</li>
+            <li class="list-group-item list-group-item-info">列表2</li>
+            <li class="list-group-item list-group-item-dark">列表3</li>
+            <li class="list-group-item list-group-item-warning">列表4</li>
+            <li class="list-group-item list-group-item-danger">列表5</li>
+            <li class="list-group-item list-group-item-light">列表6</li>
+ <hr/>
+
+        <!-- 卡片类 -->
+        <h1>卡片:</h1>
+        <div class="card">
+            <div class="card-header">
+                卡片标题头
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">内容标题头</h3>
+                <p class="card-text">内容文本</p>
+                <a class="crad-link">内容链接</a>
+            </div>
+            <div class="card-footer">卡片底部</div>
+        </div>
+<br/>
+        <h1>卡片(带图片)[类似名片]:</h1>
+        <div class="card" style="width:400px">
+            <img src="img.png" alt="名片" width="100%">
+            <div class="card-body">
+                <h3 class="card-title">谢夏戈</h3>
+                <p class="card-text">初级前端,爱好编程,爱猫,爱钢琴.</p>
+                <a class="card-link">我的个人博客</a>
+            </div>
+        </div>
+<hr/>
+
+        <!-- 折叠效果 -->
+        <h1>标准折叠:</h1>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#domo">折叠按钮</button>
+            <div id="domo" class="collapse">
+                这是折叠按钮的内容.
+            </div>
+<br/>
+        <h1>手风琴折叠效果:</h1>
+        <div id="xxg1">
+            <!-- 卡片盒子1 -->
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#sfq1">手风琴1</a>
+                </div>
+                <div id="sfq1" class="collapse" data-parent="#xxg1">
+                    <div class="card-body">
+                        手风琴内容1
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片盒子2 -->
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#sfq2">手风琴2</a>
+                </div>
+                <div id="sfq2" class="collapse" data-parent="#xxg1">
+                    <div class="card-body">
+                        手风琴内容2
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片盒子3 -->
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#sfq3">手风琴3</a>
+                </div>
+                <div id="sfq3" class="collapse" data-parent="#xxg1">
+                    <div class="card-body">
+                        手风琴内容3
+                    </div>
+                </div>
+            </div>
+        </div>
+<hr/>
+
+        <!-- 导航选项卡 -->
+        <h1>导航:导航选项卡</h1>
+        <ul class="nav nav-tabs">
+            <!-- 选项卡1 -->
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#xxkk1">选项卡1</a>
+            </li>
+            <!-- 选项卡2 -->
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#xxkk2">选项卡2</a>
+            </li>
+            <!-- 选项卡3 -->
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#xxkk3">选项卡3</a>
+            </li>
+        </ul>
+            <div class="tab-content">
+                <div id="xxkk1" class="container tab-pane active"><br/>
+                    <h3>选项卡内容标题1</h3>
+                    <p>选项卡内容段落1</p>
+                </div> 
+                <div id="xxkk2" class="container tab-pane fade"><br/>
+                    <h3>选项卡内容标题2</h3>
+                    <p>选项卡内容段落2</p>
+                </div> 
+                <div id="xxkk3" class="container tab-pane fade"><br/>
+                    <h3>选项卡内容标题3</h3>
+                    <p>选项卡内容段落3</p>
+                </div> 
+            </div>
+<br/>
+
+        <!-- 导航类 -->
+        <h1>导航栏:</h1>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <span class="navbar-brand text-light">Natsu</span>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">list1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">list2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">list3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">list4</a>
+                </li>
+            </ul>
+        </nav>
+<br/>
+
+        <h1>导航栏:[居中][响应式][图片logo]</h1>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="width: 400px">
+            <span class="navbar-brand ">
+                Natsu
+                <img alt="logo" src="img.png" style="width: 40px"/>
+            </span>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nav1" class="collapse navbar-collapse navbar-dark justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="javascript:;">nav1</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="javascript:;">nav2</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="javascript:;">nav3</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="javascript:;">nav4</a>
+                    </li>
+               </ul>
+            </div>
+        </nav>
+<br/>
+<hr/>
+<br/>
+        <!-- 轮播图 -->
+        <h1>轮播图:</h1>
+        <div id="lbt" class="carousel slide" data-ride="carousel">
+
+            <ul class="carousel-indicators">
+                <li data-target="#lbt" data-slide-to="0" class="active"></li> 
+                <li data-target="#lbt" data-slide-to="1" ></li> 
+                <li data-target="#lbt" data-slide-to="2" ></li>  
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/chrome-big.jpg" />
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/opera-big.jpg" />
+                </div>
+                <div class="carousel-item ">
+                    <img src="img/ie-big.jpg" />
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#lbt" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#lbt" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+<br/>
+<hr/>
+<br/>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="bottom">
+            
+        </div>
+    </div>
+</body>
+</html>
