@@ -1,0 +1,42 @@
+SELECT语句可以通过WHERE条件来设定查询条件
+查询结果是满足查询条件的记录。例如，要指定条件“分数在80分或以上的学生”，
+写成WHERE条件就是
+
+SELECT * FROM students WHERE score >= 80。
+SELECT * FROM <表名> WHERE <条件表达式>
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\《AND 且》\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+条件表达式可以用<条件1> AND <条件2>表达满足条件1并且满足条件2
+
+SELECT * FROM students WHERE score >= 80 AND gender = 'M';
+SELECT * FROM <表名> WHERE <条件1> AND <条件2>;
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\《OR 或》\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+第二种条件是<条件1> OR <条件2>，表示满足条件1或者满足条件2
+SELECT * FROM students WHERE score >= 80 OR gender = 'M';
+SELECT * FROM <表名> WHERE <条件1> OR <条件2>;
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\《NOT 非 <>》\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+第三种条件是NOT <条件>，表示“不符合该条件”的记录
+SELECT * FROM students WHERE NOT class_id = 2;
+SELECT * FROM <表名> WHERE NOT <条件>;
+
+上述NOT条件NOT class_id = 2其实等价于class_id <> 2，
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\《组合使用》\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+要组合三个或者更多的条件，就需要用小括号()表示如何进行条件运算。
+如果不加括号，条件运算按照NOT、AND、OR的优先级进行，即NOT优先级最高，其次是AND，最后是OR。加上括号可以改变优先级。
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\《使用LIKE判断相似》\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+name LIKE 'ab%'     // %表示任意字符，例如'ab%'将匹配'ab'，'abc'，'abcd'
+
+例: SELECT * FROM students WHERE name LIKE '小%'
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\《BETWEEN   之间》\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+WHERE score BETWEEN 60 AND 90

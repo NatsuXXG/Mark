@@ -1,0 +1,85 @@
+在命令行启动本地服务器: net start mysql
+在命令行登录本地数据库: mysql -h localhost -u root -p     (然后输入密码)   [-h localhost 在本地可以不写]
+
+
+[创建数据库]:  CREATE DATABASE <数据库名>;
+[删除数据库]:  DROP   DATABASE <数据库名>;
+
+[查看有哪些库]: show  databases;
+[选择数据库]:   use <数据库名>;
+
+
+[创建数据表]: 
+    CREATE TABLE <数据表名>(
+        id<主键名> INT<整数>  NOT NULL<数据不能为空>  AUTO_INCREMENT<自动增加>,
+        t1<标题头1>   VARCHAR(100)<100的字符串,通常utf-8的一个汉字占3个>
+        t2<标题头2>   VARCHAR(40)
+        date<时间名>    DATE,
+        PRIMARY KEY (主键名) <绑定主键>
+    )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+    <数据库引擎=InnoDB  默认  字符格式 = 万国码的utf-8>
+
+
+[删除数据表]:DROP TABLE <数据表名>;
+
+
+[插入数据]:
+    INSERT INTO <数据表名>
+    (标题1,标题2,..... 时间)
+    VALUES
+    ("学习php","纳兹",NOW());
+{{例: INSERT INTO test_ble (name,age,date)  VALUES ("XXG","20",NOW());}}
+
+[展示有哪些表]: show tables;
+
+[查看表结构]: desc <数据表名>;
+
+[读取数据表]: select * from <数据表名>
+[根据条件读取表]: select * from <数据表名> where <条件>
+
+
+{update}
+[更/改数据表-行]: UPDATE <表名> SET <表头>='<表内容>' WHERE <条件>;
+
+{delete}
+[删除数据表-行]: DELETE FROM <表名> WHERE <条件>;
+
+
+
+{like}
+[包含查询]: SELECT * from <表名>  WHERE <表头> LIKE '%COM';  (%字符来表示任意字符)
+
+
+(难!!!    UNION 操作符 )
+{选出两个表中的某个表头 的 值(不重复)  UNION }
+    SELECT <表头> FROM <表名1>
+    UNION
+    SELECT <表头> FROM <表名2>
+    ORDER BY <另外取名字的表头>;
+
+{选出两个表中的某个表头 的 值(重复的)  UNION ALL}
+    SELECT <表头> FROM <表名1>
+    UNION ALL
+    SELECT <表头> FROM <表名2>
+    ORDER BY <另外取名字的表头>;
+
+
+{带有 WHERE 的 SQL UNION ALL}
+    SELECT <表头1> FROM <数据表1>
+    WHERE <条件>
+    UNION ALL
+    SELECT <表头1> FROM <数据表2>
+    WHERE <条件>
+    ORDER BY <另外取名字的表头>;
+
+
+
+
+{{排序}}{{ ASC是升序 }} {{ DESC是降序 }}
+SELECT * from <表名> ORDER BY <要根据的表头> ASC;
+
+
+
+
+
+

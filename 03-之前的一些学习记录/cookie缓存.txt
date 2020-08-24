@@ -1,0 +1,49 @@
+cookie 以 名/值对 的形式储存 ,如下:
+
+username = xxg
+
+
+
+
+创建一个cookie!
+document.cookie = "name=xxg";
+
+为cookie添加一个过期时间!!(UTC或GMT时间)
+document.cookie = "name=xxg; expires = Thu,18 Dec 2020 12:00:00 GMT";
+
+可以为cookie设置路径 默认属于当前页面.
+document.cookie = "name=xxg; path=/";
+
+
+
+
+JS读取Cookie
+var x = document.cookie; //返回所有cookie
+
+
+使用 JavaScript 修改 Cookie (旧的 cookie 将被覆盖。)
+document.cookie="username=yt ; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+
+
+ 
+使用 JavaScript 删除 Cookie (当您删除时不必指定 cookie 的值。)
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
